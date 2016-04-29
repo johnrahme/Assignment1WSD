@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+	<user>
+		<profile>
+			<firstName>Richard</firstName>
+			<lastName>Nelson</lastName>
+			<email>richard.nelson@gmail.com</email>
+			<password>password</password>
+		</profile>
+		<poll>
+			<title>Let's meet up for some food!</title>
+			<description>This week we have our first food meeting!</description>
+			<location>UTS</location>
+			<createdAt>
+				<year>2016</year>
+				<month>4</month>
+				<day>23</day>
+				<hour>3</hour>
+				<minute>30</minute>
+			</createdAt>
+			<time>
+				<year>2016</year>
+				<month>4</month>
+				<day>23</day>
+				<hour>3</hour>
+				<minute>30</minute>
+			</time>			
+			<participant>
+				<name>Alex</name>
+				<time>
+					<year>2016</year>
+					<month>4</month>
+					<day>23</day>
+					<hour>3</hour>
+					<minute>30</minute>
+				</time>
+			</participant>
+		</poll>
+	</user>
+</users>
