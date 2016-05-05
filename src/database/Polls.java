@@ -1,4 +1,4 @@
-package login;
+package database;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -31,8 +31,8 @@ public class Polls implements Serializable {
 		Participant part2 = new Participant("James", times);
 		participants.add(part1);
 		participants.add(part2);
-		Poll poll1 = new Poll("Poll Title", "Poll Desciption", "Poll Location", t1, true, times, participants);
-		Poll poll2 = new Poll("Poll Title2", "Poll Desciption2", "Poll Location2", t1, true, times, participants);
+		Poll poll1 = new Poll("Poll Title", "john.rahme.se@gmail.com", "Poll Desciption", "Poll Location", t1, true, times, participants);
+		Poll poll2 = new Poll("Poll Title2", "test@test.se", "Poll Desciption2", "Poll Location2", t1, true, times, participants);
 		list.add(poll1);
 		list.add(poll2);
 	}
@@ -44,6 +44,11 @@ public class Polls implements Serializable {
 	public void setList(ArrayList<Poll> list) {
 		this.list = list;
 	}
-	
+    public void addPoll(Poll poll) {
+        list.add(poll);
+    }
+    public void removePoll(Poll poll) {
+        list.remove(poll);
+    }
 	
 }

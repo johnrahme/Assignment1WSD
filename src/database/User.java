@@ -1,4 +1,4 @@
-package login;
+package database;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -19,6 +19,9 @@ public class User implements Serializable{
 	@XmlElement(name = "password")
 	private String password;
 	
+	public User(){
+		
+	}
 	
 	public User(String firstName, String lastName, String email, String password) {
 		super();

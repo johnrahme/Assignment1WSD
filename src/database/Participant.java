@@ -1,4 +1,4 @@
-package login;
+package database;
 
 import java.io.Serializable;
 import java.util.*;
@@ -11,8 +11,9 @@ public class Participant implements Serializable {
 	private String name;
 	private ArrayList<Time> times = new ArrayList<Time>();
 	
-	
-	
+	public Participant(){
+		
+	}
 	public Participant(String name, ArrayList<Time> times) {
 		super();
 		this.name = name;

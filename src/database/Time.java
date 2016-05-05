@@ -1,4 +1,4 @@
-package login;
+package database;
 
 import java.io.Serializable;
 
@@ -14,6 +14,9 @@ public class Time implements Serializable {
 	@XmlElement(name = "time")
 	private String time;
 	
+	public Time(){
+		
+	}
 	public Time(String date, String time) {
 		super();
 		this.date = date;

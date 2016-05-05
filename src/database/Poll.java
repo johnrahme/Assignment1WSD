@@ -1,4 +1,4 @@
-package login;
+package database;
 
 import java.io.Serializable;
 import java.util.*;
@@ -14,6 +14,8 @@ public class Poll implements Serializable {
 
 	@XmlElement(name = "title")
 	private String title;
+	@XmlElement(name = "creator")
+	private String creator;
 	@XmlElement(name = "description")
 	private String description;
 	@XmlElement(name = "location")
@@ -27,11 +29,15 @@ public class Poll implements Serializable {
 	@XmlElement(name = "participant")
 	private ArrayList<Participant> participants = new ArrayList<Participant>();
 	
+	public Poll(){
+		
+	}
 	
-	public Poll(String title, String description, String location, Time createdAt, boolean open, ArrayList<Time> times,
+	public Poll(String title, String creator, String description, String location, Time createdAt, boolean open, ArrayList<Time> times,
 			ArrayList<Participant> participants) {
 		super();
 		this.title = title;
+		this.creator = creator;
 		this.description = description;
 		this.location = location;
 		this.createdAt = createdAt;
@@ -44,6 +50,12 @@ public class Poll implements Serializable {
 	}
 	public void setTitle(String title) {
 		this.title = title;
+	}
+	public String getCreator() {
+		return creator;
+	}
+	public void setCreator(String creator) {
+		this.creator = creator;
 	}
 	public String getDescription() {
 		return description;
