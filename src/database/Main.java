@@ -2,6 +2,7 @@ package database;
 
 import java.io.FileOutputStream;
 import java.util.ArrayList;
+import java.util.Date;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -27,19 +28,23 @@ public class Main {
 		Participant part2 = new Participant("Martinez", times);
 		participants.add(part1);
 		participants.add(part2);
-		Poll addedPoll = new Poll("Poll Title3", "richard@gmail.com", "Poll Desciption3", "Poll Location 3", t1, true, times, participants);
-		
+		Poll addedPoll = new Poll(3,"Poll Title3", "richard@gmail.com", "Poll Desciption3", "Poll Location 3", t1, true, times, participants);
+		Participant addedPart = new Participant("Richard", null);
 		
 		Polls polls = new Polls();
 		polls.setExampleList();
 		
 		UserHandler uh = new UserHandler();
 		uh.setFilePath("WebContent/WEB-INF/testUsers.xml");
-		uh.addUserToXml(addedUser);
+		uh.addUser(addedUser);
+		//uh.removeUser("adrian@gmail.com");
 		
 		PollHandler ph = new PollHandler();
 		ph.setFilePath("WebContent/WEB-INF/testPolls.xml");
-		ph.addPollToXml(addedPoll);
+		//ph.addPoll(addedPoll);
+		//ph.addParticipant(1, addedPart);
+		//ph.setOpen(2, false);
+		//ph.removePoll(132);
 		
 		
 		
@@ -57,7 +62,7 @@ public class Main {
 		  //m.marshal(testUsers, System.out);
 		 //m2.marshal(polls, fout2);
 		  
-		  
+		  System.out.println(System.currentTimeMillis());
 
 	}
 	

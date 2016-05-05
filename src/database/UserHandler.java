@@ -28,8 +28,7 @@ public class UserHandler {
 		System.out.println(users.getList().size());
 		fin.close();
 	}
-	public void addUserToXml(User user) throws Exception{
-		  users.addUser(user);
+	public void writeToXml() throws Exception{
 		  // Boilerplate code to convert objects to XML...
 		  JAXBContext jc = JAXBContext.newInstance(Users.class);
 		  Marshaller m = jc.createMarshaller();
@@ -37,6 +36,28 @@ public class UserHandler {
 		  m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 		  FileOutputStream fout = new FileOutputStream(filePath);
 		  m.marshal(users, fout);
+	}
+	//Find the id the specific user has in the array by providing the email
+	public int findUserByEmail(String email){
+		for(int i = 0; i < users.getList().size(); i++){
+			if(users.getList().get(i).getEmail().equals(email)){
+				return i;
+			}
+		}
+		return -1;
+	}
+	// Add user and update xml
+	public void addUser(User user) throws Exception{
+		  users.addUser(user);
+		  writeToXml();
+	}
+	//remove user and update xml
+	public void removeUser(String email) throws Exception{
+		  int id = findUserByEmail(email);
+		  if(id >-1){
+			  users.getList().remove(id);
+			  writeToXml();
+		  }
 	}
 	public Users getUsers() {
 		return users;

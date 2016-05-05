@@ -28,8 +28,7 @@ public class PollHandler {
 		System.out.println(polls.getList().size());
 		fin.close();
 	}
-	public void addPollToXml(Poll poll) throws Exception{
-		polls.addPoll(poll);
+	public void writeToXml() throws Exception{
 		  // Boilerplate code to convert objects to XML...
 		  JAXBContext jc = JAXBContext.newInstance(Polls.class);
 		  Marshaller m = jc.createMarshaller();
@@ -37,6 +36,46 @@ public class PollHandler {
 		  m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 		  FileOutputStream fout = new FileOutputStream(filePath);
 		  m.marshal(polls, fout);
+	}
+	
+	//This function gets the finds the id in the poll array from the id specified in the xml
+	private int getIdOfPoll(long pollId){
+		for(int i = 0; i<polls.getList().size(); i++){
+			if(polls.getList().get(i).getId() == pollId){
+				return i;
+			}
+		}
+		return -1;
+	}
+	//Add a poll and write it to the xml
+	public void addPoll(Poll poll)throws Exception{
+		polls.addPoll(poll);
+		writeToXml();
+	}
+	//Remove a poll with the specified id
+	public void removePoll(long pollId)throws Exception{
+		int id = getIdOfPoll(pollId);
+		if(id > -1){
+			polls.getList().remove(id);
+			writeToXml();
+		}
+	}
+	//Set the specified poll to either open or closed
+	public void setOpen(long pollId, boolean open)throws Exception{
+		int id = getIdOfPoll(pollId);
+		if(id > -1){
+			polls.getList().get(id).setOpen(open);
+			writeToXml();
+		}
+		
+	}
+	// Add a participant to the specific poll
+	public void addParticipant(long pollId, Participant participant)throws Exception{
+		int id = getIdOfPoll(pollId);
+		if(id > -1){
+			polls.getList().get(id).getParticipants().add(participant);
+			writeToXml();
+		}
 	}
 	public Polls getPolls() {
 		return polls;

@@ -12,6 +12,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class Poll implements Serializable {
 
 
+	@XmlElement(name = "id")
+	private long id;
 	@XmlElement(name = "title")
 	private String title;
 	@XmlElement(name = "creator")
@@ -33,9 +35,10 @@ public class Poll implements Serializable {
 		
 	}
 	
-	public Poll(String title, String creator, String description, String location, Time createdAt, boolean open, ArrayList<Time> times,
+	public Poll(long id, String title, String creator, String description, String location, Time createdAt, boolean open, ArrayList<Time> times,
 			ArrayList<Participant> participants) {
 		super();
+		this.id = id;
 		this.title = title;
 		this.creator = creator;
 		this.description = description;
@@ -44,7 +47,17 @@ public class Poll implements Serializable {
 		this.open = open;
 		this.times = times;
 		this.participants = participants;
+		
+		this.id = System.currentTimeMillis();
 	}
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
 	public String getTitle() {
 		return title;
 	}

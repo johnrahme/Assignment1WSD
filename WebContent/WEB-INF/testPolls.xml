@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <polls>
     <poll>
+        <id>1462441249672</id>
         <title>Poll Title</title>
         <creator>john.rahme.se@gmail.com</creator>
         <description>Poll Desciption</description>
@@ -42,6 +43,7 @@
         </participant>
     </poll>
     <poll>
+        <id>1462441249672</id>
         <title>Poll Title2</title>
         <creator>test@test.se</creator>
         <description>Poll Desciption2</description>
@@ -72,47 +74,6 @@
         </participant>
         <participant>
             <name>James</name>
-            <times>
-                <date>2016-04-12</date>
-                <time>22:30</time>
-            </times>
-            <times>
-                <date>2016-04-13</date>
-                <time>22:34</time>
-            </times>
-        </participant>
-    </poll>
-    <poll>
-        <title>Poll Title3</title>
-        <creator>richard@gmail.com</creator>
-        <description>Poll Desciption3</description>
-        <location>Poll Location 3</location>
-        <createdAt>
-            <date>2016-04-12</date>
-            <time>22:30</time>
-        </createdAt>
-        <open>true</open>
-        <time>
-            <date>2016-04-12</date>
-            <time>22:30</time>
-        </time>
-        <time>
-            <date>2016-04-13</date>
-            <time>22:34</time>
-        </time>
-        <participant>
-            <name>Kyle</name>
-            <times>
-                <date>2016-04-12</date>
-                <time>22:30</time>
-            </times>
-            <times>
-                <date>2016-04-13</date>
-                <time>22:34</time>
-            </times>
-        </participant>
-        <participant>
-            <name>Martinez</name>
             <times>
                 <date>2016-04-12</date>
                 <time>22:30</time>

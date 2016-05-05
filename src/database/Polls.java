@@ -31,8 +31,8 @@ public class Polls implements Serializable {
 		Participant part2 = new Participant("James", times);
 		participants.add(part1);
 		participants.add(part2);
-		Poll poll1 = new Poll("Poll Title", "john.rahme.se@gmail.com", "Poll Desciption", "Poll Location", t1, true, times, participants);
-		Poll poll2 = new Poll("Poll Title2", "test@test.se", "Poll Desciption2", "Poll Location2", t1, true, times, participants);
+		Poll poll1 = new Poll(1,"Poll Title", "john.rahme.se@gmail.com", "Poll Desciption", "Poll Location", t1, true, times, participants);
+		Poll poll2 = new Poll(2, "Poll Title2", "test@test.se", "Poll Desciption2", "Poll Location2", t1, true, times, participants);
 		list.add(poll1);
 		list.add(poll2);
 	}
