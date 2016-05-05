@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<polls>
+    <poll>
+        <title>Poll Title</title>
+        <description>Poll Desciption</description>
+        <location>Poll Location</location>
+        <createdAt>
+            <date>2016-04-12</date>
+            <time>22:30</time>
+        </createdAt>
+        <open>true</open>
+        <time>
+            <date>2016-04-12</date>
+            <time>22:30</time>
+        </time>
+        <time>
+            <date>2016-04-13</date>
+            <time>22:34</time>
+        </time>
+        <participant>
+            <name>Richard</name>
+            <times>
+                <date>2016-04-12</date>
+                <time>22:30</time>
+            </times>
+            <times>
+                <date>2016-04-13</date>
+                <time>22:34</time>
+            </times>
+        </participant>
+        <participant>
+            <name>James</name>
+            <times>
+                <date>2016-04-12</date>
+                <time>22:30</time>
+            </times>
+            <times>
+                <date>2016-04-13</date>
+                <time>22:34</time>
+            </times>
+        </participant>
+    </poll>
+    <poll>
+        <title>Poll Title2</title>
+        <description>Poll Desciption2</description>
+        <location>Poll Location2</location>
+        <createdAt>
+            <date>2016-04-12</date>
+            <time>22:30</time>
+        </createdAt>
+        <open>true</open>
+        <time>
+            <date>2016-04-12</date>
+            <time>22:30</time>
+        </time>
+        <time>
+            <date>2016-04-13</date>
+            <time>22:34</time>
+        </time>
+        <participant>
+            <name>Richard</name>
+            <times>
+                <date>2016-04-12</date>
+                <time>22:30</time>
+            </times>
+            <times>
+                <date>2016-04-13</date>
+                <time>22:34</time>
+            </times>
+        </participant>
+        <participant>
+            <name>James</name>
+            <times>
+                <date>2016-04-12</date>
+                <time>22:30</time>
+            </times>
+            <times>
+                <date>2016-04-13</date>
+                <time>22:34</time>
+            </times>
+        </participant>
+    </poll>
+</polls>

@@ -20,26 +20,9 @@ public class Users implements Serializable {
 	}
 	
 	public void setExampleList(){
-		ArrayList <Time> times = new ArrayList<Time>();
-		ArrayList <Participant> participants = new ArrayList <Participant>();
-		ArrayList <Poll> polls = new ArrayList <Poll>();
 		
-		Profile profile = new Profile("John", "Rahme", "john.rahme.se@gmail.com", "password");	
-		Time t1  = new Time(2016,3,10,1,4);
-		Time t2 = new Time(2016, 4, 10, 1,4);
-		times.add(t1);
-		times.add(t2);
-		Participant part1 = new Participant("Richard", times);
-		Participant part2 = new Participant("James", times);
-		participants.add(part1);
-		participants.add(part2);
-		Poll poll1 = new Poll("Poll Title", "Poll Desciption", "Poll Location", t1, true, times, participants);
-		Poll poll2 = new Poll("Poll Title2", "Poll Desciption2", "Poll Location2", t1, true, times, participants);
-		polls.add(poll1);
-		polls.add(poll2);
-		
-		User u1 = new User(profile, polls);
-		User u2 = new User(profile, polls);
+		User u1 = new User("John", "Rahme", "john.rahme.se@gmail.com", "password");
+		User u2 = new User("John", "Rahme", "john.rahme.se@gmail.com", "password");
 		list.add(u1);
 		list.add(u2);
 	}

@@ -9,53 +9,28 @@ import javax.xml.bind.annotation.XmlElement;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Time implements Serializable {
 	
-	@XmlElement(name = "year")
-	private int year;
-	@XmlElement(name = "month")
-	private int month;
-	@XmlElement(name = "day")
-	private int day;
-	@XmlElement(name = "hour")
-	private int hour;
-	@XmlElement(name = "minute")
-	private int minute;
-	public Time(int year, int month, int day, int hour, int minute) {
+	@XmlElement(name = "date")
+	private String date;
+	@XmlElement(name = "time")
+	private String time;
+	
+	public Time(String date, String time) {
 		super();
-		this.year = year;
-		this.month = month;
-		this.day = day;
-		this.hour = hour;
-		this.minute = minute;
+		this.date = date;
+		this.time = time;
 	}
-	public int getYear() {
-		return year;
+	public String getDate() {
+		return date;
 	}
-	public void setYear(int year) {
-		this.year = year;
+	public void setDate(String date) {
+		this.date = date;
 	}
-	public int getMonth() {
-		return month;
+	public String getTime() {
+		return time;
 	}
-	public void setMonth(int month) {
-		this.month = month;
+	public void setTime(String time) {
+		this.time = time;
 	}
-	public int getDay() {
-		return day;
-	}
-	public void setDay(int day) {
-		this.day = day;
-	}
-	public int getHour() {
-		return hour;
-	}
-	public void setHour(int hour) {
-		this.hour = hour;
-	}
-	public int getMinute() {
-		return minute;
-	}
-	public void setMinute(int minute) {
-		this.minute = minute;
-	}
+	
 	
 }

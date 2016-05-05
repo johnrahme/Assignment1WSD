@@ -10,30 +10,48 @@ import javax.xml.bind.annotation.XmlElement;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class User implements Serializable{
 
-	@XmlElement(name = "profile")
-	private Profile profile;
-	@XmlElement(name = "poll")
-	private ArrayList<Poll> polls = new ArrayList<Poll>();
+	@XmlElement(name = "firstName")
+	private String firstName;
+	@XmlElement(name = "lastName")
+	private String lastName;
+	@XmlElement(name = "email")
+	private String email;
+	@XmlElement(name = "password")
+	private String password;
 	
 	
-	
-	public User(Profile profile, ArrayList<Poll> polls) {
+	public User(String firstName, String lastName, String email, String password) {
 		super();
-		this.profile = profile;
-		this.polls = polls;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+		this.password = password;
 	}
-	public Profile getProfile() {
-		return profile;
+	public String getFirstName() {
+		return firstName;
 	}
-	public void setProfile(Profile profile) {
-		this.profile = profile;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
-	public ArrayList<Poll> getPolls() {
-		return polls;
+	public String getLastName() {
+		return lastName;
 	}
-	public void setPolls(ArrayList<Poll> polls) {
-		this.polls = polls;
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	
 	
 	
 

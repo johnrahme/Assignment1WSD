@@ -12,11 +12,8 @@
 			<description>This week we have our first food meeting!</description>
 			<location>UTS</location>
 			<createdAt>
-				<year>2016</year>
-				<month>4</month>
-				<day>23</day>
-				<hour>3</hour>
-				<minute>30</minute>
+				<date></date>
+				<time></time>
 			</createdAt>
 			<time>
 				<year>2016</year>
