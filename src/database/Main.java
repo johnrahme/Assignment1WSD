@@ -13,7 +13,6 @@ public class Main {
 
 	public static void main(String[] args) throws Exception {
 		
-		System.out.println("Hello World!");
 		Users testUsers = new Users();
 		testUsers.setExampleList();
 		
@@ -62,8 +61,6 @@ public class Main {
 		  //m.marshal(testUsers, System.out);
 		 //m2.marshal(polls, fout2);
 		  
-		  System.out.println(System.currentTimeMillis());
-
 	}
 	
 

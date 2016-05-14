@@ -41,4 +41,13 @@ public class Users implements Serializable {
     public void removeUser(User user) {
         list.remove(user);
     }
+    //Return a user with the provided email and password
+    public User login(String email, String password) {
+        // For each user in the list...
+        for (User user : list) {
+            if (user.getEmail().equals(email) && user.getPassword().equals(password))
+                return user; // Login correct. Return this user.
+        }
+        return null; // Login incorrect. Return null.
+    }
 }

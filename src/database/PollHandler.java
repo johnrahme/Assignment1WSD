@@ -38,7 +38,7 @@ public class PollHandler {
 		  m.marshal(polls, fout);
 	}
 	
-	//This function gets the finds the id in the poll array from the id specified in the xml
+	//This function gets  the id in the poll array from the id specified in the xml
 	private int getIdOfPoll(long pollId){
 		for(int i = 0; i<polls.getList().size(); i++){
 			if(polls.getList().get(i).getId() == pollId){
