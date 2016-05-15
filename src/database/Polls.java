@@ -50,5 +50,13 @@ public class Polls implements Serializable {
     public void removePoll(Poll poll) {
         list.remove(poll);
     }
+    public String toString(){
+    	String returnString = "";
+    	for(Poll poll:list){
+    		returnString += poll.getTitle()+"\n";
+    		returnString += poll.getId()+"\n";
+    	}
+    	return returnString;
+    }
 	
 }

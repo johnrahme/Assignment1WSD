@@ -77,8 +77,20 @@ public class PollHandler {
 			writeToXml();
 		}
 	}
+	//Get all polls
 	public Polls getPolls() {
 		return polls;
+	}
+	//Get polls from a specific creator
+	public Polls getPolls(String creatorEmail){
+		Polls creatorPolls = new Polls();
+		//Loop through polls and find the ones with the 
+		for(Poll poll:polls.getList()){
+			if(poll.getCreator().equals(creatorEmail)){
+				creatorPolls.getList().add(poll);
+			}
+		}
+		return creatorPolls;
 	}
 	public void setPolls(Polls polls) {
 		this.polls = polls;

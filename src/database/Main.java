@@ -35,7 +35,7 @@ public class Main {
 		
 		UserHandler uh = new UserHandler();
 		uh.setFilePath("WebContent/WEB-INF/testUsers.xml");
-		uh.addUser(addedUser);
+		//uh.addUser(addedUser);
 		//uh.removeUser("adrian@gmail.com");
 		
 		PollHandler ph = new PollHandler();
