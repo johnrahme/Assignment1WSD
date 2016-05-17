@@ -18,18 +18,14 @@
 				<participants>
 					<participant>Mary</participant>
 					<participant>James</participant>
+					<participant>Richard</participant>
 				</participants>
 			</option>
 			<option>
 				<date>2016-04-13</date>
 				<time>22:34</time>
 				<participants>
-					<participant>
-						<name>Richard</name>
-					</participant>
-					<participant>
-						<name>James</name>
-					</participant>
+					<participant>James</participant>
 				</participants>
 			</option>
 		</options>
@@ -50,24 +46,16 @@
 				<date>2016-04-17</date>
 				<time>22:30</time>
 				<participants>
-					<participant>
-						<name>Anne</name>
-					</participant>
-					<participant>
-						<name>Mary</name>
-					</participant>
+					<participant>Anne</participant>
+					<participant>Mary</participant>
 				</participants>
 			</option>
 			<option>
 				<date>2016-04-18</date>
 				<time>22:34</time>
 				<participants>
-					<participant>
-						<name>Richard</name>
-					</participant>
-					<participant>
-						<name>Andrew</name>
-					</participant>
+					<participant>Richard</participant>
+					<participant>Andrew</participant>
 				</participants>
 			</option>
 		</options>
