@@ -12,33 +12,47 @@
 </head>
 <body>
 <div class = "container">
-asd
+<h2>Add a poll!</h2>
 <div class="row">
-        <div class='col-sm-5' id = "times">
-            <div class = "row time">
-        	     <div class = "col-sm-8">
-        			<div class="form-group">
-		                <div class='input-group date'>
-		                    <input type='text' class="form-control" name = 'times[]'/>
-		                    <span class="input-group-addon">
-		                        <span class="glyphicon glyphicon-calendar"></span>
-		                    </span>
-		               
-		                </div>
-	            	</div>
-        		</div>
-        		<div class = "col-sm-4">
-	        		<button class = "btn btn-danger" id = "remove_time">Remove</button>
-        		</div>
+	<form method = "POST" action = "storePoll.jsp">
+	<div class = "col-sm-7">
+        	<div class = "form-group">
+        		<label for = "title" class = "control-label">Title: </label>
+        		<input type = "text" class = "form-control" name = "title" id = "title">
+        	</div>
+        	<div class = "form-group">
+        		<label for = "description" class = "control-label">Description: </label>
+        		<textarea class = "form-control" name = "description" id = "description"></textarea>
+        	</div>
+        	<div class = "form-group">
+        		<label for = "open" class = "control-label">Open: </label>
+        		<input type = "checkbox" name = "open" id = "open">
         	</div>
         </div>
-        <div class = "col-sm-2">
-        <button class = "btn btn-success" id = "addTime">Add time</button>
-        </div>
-        <div class = "col-sm-5">
-        rest of form goes here
-        </div>
-    </div>
+		<div class = 'col-sm-5'>
+		    <div id = "times">
+		        <label for = "times[]" class = "control-label">Times: </label>
+		            <div class = "row time">
+		        	     <div class = "col-sm-8">
+		        			<div class="form-group">
+				                <div class='input-group date'>
+				                    <input type='text' class="form-control" name = 'times[]'/>
+				                    <span class="input-group-addon">
+				                        <span class="glyphicon glyphicon-calendar"></span>
+				                    </span>
+				               
+				                </div>
+			            	</div>
+		        		</div>
+		        		<div class = "col-sm-4">
+			        		<button class = "btn btn-danger" id = "remove_time">Remove</button>
+		        		</div>
+		        	</div>
+		        </div>
+		        <button class = "btn btn-success" id = "addTime">Add time</button>
+	    </div>
+    </form>
+</div>
 
 </div>
 
