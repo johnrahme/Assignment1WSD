@@ -16,12 +16,8 @@
 				<date>2016-04-12</date>
 				<time>22:30</time>
 				<participants>
-					<participant>
-						<name>Mary</name>
-					</participant>
-					<participant>
-						<name>James</name>
-					</participant>
+					<participant>Mary</participant>
+					<participant>James</participant>
 				</participants>
 			</option>
 			<option>
