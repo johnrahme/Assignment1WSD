@@ -3,7 +3,7 @@
     <poll>
         <id>1462441249672</id>
         <title>Poll Title</title>
-        <creator>john.rahme.se@gmail.com</creator>
+        <creator>john.rahme.se@gmail.com</creator> <!-- This refers to a "User" -->
         <description>Poll Desciption</description>
         <location>Poll Location</location>
         <createdAt>
@@ -11,36 +11,32 @@
             <time>22:30</time>
         </createdAt>
         <open>true</open>
-        <time>
-            <date>2016-04-12</date>
-            <time>22:30</time>
-        </time>
-        <time>
-            <date>2016-04-13</date>
-            <time>22:34</time>
-        </time>
-        <participant>
-            <name>Richard</name>
-            <times>
-                <date>2016-04-12</date>
-                <time>22:30</time>
-            </times>
-            <times>
-                <date>2016-04-13</date>
-                <time>22:34</time>
-            </times>
-        </participant>
-        <participant>
-            <name>James</name>
-            <times>
-                <date>2016-04-12</date>
-                <time>22:30</time>
-            </times>
-            <times>
-                <date>2016-04-13</date>
-                <time>22:34</time>
-            </times>
-        </participant>
+		<options>
+			<option>
+				<date>2016-04-12</date>
+				<time>22:30</time>
+				<participants>
+					<participant>
+						<name>Mary</name>
+					</participant>
+					<participant>
+						<name>James</name>
+					</participant>
+				</participants>
+			</option>
+			<option>
+				<date>2016-04-13</date>
+				<time>22:34</time>
+				<participants>
+					<participant>
+						<name>Richard</name>
+					</participant>
+					<participant>
+						<name>James</name>
+					</participant>
+				</participants>
+			</option>
+		</options>
     </poll>
     <poll>
         <id>1462441249672</id>
@@ -53,35 +49,32 @@
             <time>22:30</time>
         </createdAt>
         <open>true</open>
-        <time>
-            <date>2016-04-12</date>
-            <time>22:30</time>
-        </time>
-        <time>
-            <date>2016-04-13</date>
-            <time>22:34</time>
-        </time>
-        <participant>
-            <name>Richard</name>
-            <times>
-                <date>2016-04-12</date>
-                <time>22:30</time>
-            </times>
-            <times>
-                <date>2016-04-13</date>
-                <time>22:34</time>
-            </times>
-        </participant>
-        <participant>
-            <name>James</name>
-            <times>
-                <date>2016-04-12</date>
-                <time>22:30</time>
-            </times>
-            <times>
-                <date>2016-04-13</date>
-                <time>22:34</time>
-            </times>
-        </participant>
+		<options>
+			<option>
+				<date>2016-04-17</date>
+				<time>22:30</time>
+				<participants>
+					<participant>
+						<name>Anne</name>
+					</participant>
+					<participant>
+						<name>Mary</name>
+					</participant>
+				</participants>
+			</option>
+			<option>
+				<date>2016-04-18</date>
+				<time>22:34</time>
+				<participants>
+					<participant>
+						<name>Richard</name>
+					</participant>
+					<participant>
+						<name>Andrew</name>
+					</participant>
+				</participants>
+			</option>
+		</options>
+    </poll>
     </poll>
 </polls>
