@@ -17,31 +17,40 @@ public class Main {
 		testUsers.setExampleList();
 		
 		User addedUser = new User("Adrian", "Jackson", "adrian@gmail.com", "passwordAdrian");
-		ArrayList <Time> times = new ArrayList<Time>();
-		ArrayList <Participant> participants = new ArrayList <Participant>();
-		Time t1  = new Time("2016-04-12", "22:30");
-		Time t2 = new Time("2016-04-13", "22:34");
+		
+		ArrayList <Time> times = new ArrayList <Time>();
+		ArrayList <Participant> participantList = new ArrayList<Participant>();
+		ArrayList <Option> optionList = new ArrayList<Option>();
+		
+		
+		Time t1  = new Time("2016-04-12", "22:60");
+		Time t2 = new Time("2016-04-13", "22:39");
 		times.add(t1);
 		times.add(t2);
-		Participant part1 = new Participant("Kyle", times);
-		Participant part2 = new Participant("Martinez", times);
-		participants.add(part1);
-		participants.add(part2);
-		Poll addedPoll = new Poll(3,"Poll Title3", "richard@gmail.com", "Poll Desciption3", "Poll Location 3", t1, true, times, participants);
-		Participant addedPart = new Participant("Richard", null);
+		Participant part1 = new Participant("Samuel");
+		Participant part2 = new Participant("Lillian");		
+		participantList.add(part1);
+		participantList.add(part2);
+		Participants participants = new Participants(participantList);		
+		Option opt1 = new Option(t1,participants);
+		optionList.add(opt1);
+		Options options = new Options(optionList);
+		Poll addedPoll = new Poll(4,"Poll Title3", "test@test.se", "Poll Desciption3", "Poll Location3", t1, true, options);
+		
+		Participant addedPart = new Participant("Lisa");
 		
 		Polls polls = new Polls();
 		polls.setExampleList();
 		
 		UserHandler uh = new UserHandler();
-		uh.setFilePath("WebContent/WEB-INF/testUsers.xml");
+		//uh.setFilePath("WebContent/WEB-INF/testUsers.xml");
 		//uh.addUser(addedUser);
-		uh.removeUser("adrian@gmail.com");
+		//uh.removeUser("adrian@gmail.com");
 		
 		PollHandler ph = new PollHandler();
 		ph.setFilePath("WebContent/WEB-INF/testPolls.xml");
 		//ph.addPoll(addedPoll);
-		//ph.addParticipant(1, addedPart);
+		ph.addParticipant(1463474926788L, 1, addedPart);
 		//ph.setOpen(2, false);
 		//ph.removePoll(132);
 		
@@ -59,7 +68,7 @@ public class Main {
 		  m2.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 		  //FileOutputStream fout2 = new FileOutputStream("WebContent/WEB-INF/testPolls.xml");
 		  //m.marshal(testUsers, System.out);
-		 //m2.marshal(polls, fout2);
+		  //m2.marshal(polls, fout2);
 		  
 	}
 	

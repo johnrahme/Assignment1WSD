@@ -70,10 +70,11 @@ public class PollHandler {
 		
 	}
 	// Add a participant to the specific poll
-	public void addParticipant(long pollId, Participant participant)throws Exception{
+	//Not working atm
+	public void addParticipant(long pollId, int optionId, Participant participant)throws Exception{
 		int id = getIdOfPoll(pollId);
 		if(id > -1){
-			polls.getList().get(id).getParticipants().add(participant);
+			polls.getList().get(id).getOptions().getList().get(optionId).getParticipants().getList().add(participant);
 			writeToXml();
 		}
 	}

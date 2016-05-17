@@ -26,17 +26,16 @@ public class Poll implements Serializable {
 	private Time createdAt;
 	@XmlElement(name = "open")
 	private boolean open;
-	@XmlElement(name = "time")
-	private ArrayList<Time> times = new ArrayList<Time>();
-	@XmlElement(name = "participant")
-	private ArrayList<Participant> participants = new ArrayList<Participant>();
+	@XmlElement(name = "Options")
+	private Options options;
 	
 	public Poll(){
 		
 	}
 	
-	public Poll(long id, String title, String creator, String description, String location, Time createdAt, boolean open, ArrayList<Time> times,
-			ArrayList<Participant> participants) {
+	
+	public Poll(long id, String title, String creator, String description, String location, Time createdAt,
+			boolean open, Options options) {
 		super();
 		this.id = id;
 		this.title = title;
@@ -45,11 +44,12 @@ public class Poll implements Serializable {
 		this.location = location;
 		this.createdAt = createdAt;
 		this.open = open;
-		this.times = times;
-		this.participants = participants;
-		
+		this.options = options;
+		//For now
 		this.id = System.currentTimeMillis();
 	}
+
+
 	public long getId() {
 		return id;
 	}
@@ -61,50 +61,57 @@ public class Poll implements Serializable {
 	public String getTitle() {
 		return title;
 	}
+
 	public void setTitle(String title) {
 		this.title = title;
 	}
+
 	public String getCreator() {
 		return creator;
 	}
+
 	public void setCreator(String creator) {
 		this.creator = creator;
 	}
+
 	public String getDescription() {
 		return description;
 	}
+
 	public void setDescription(String description) {
 		this.description = description;
 	}
+
 	public String getLocation() {
 		return location;
 	}
+
 	public void setLocation(String location) {
 		this.location = location;
 	}
+
 	public Time getCreatedAt() {
 		return createdAt;
 	}
+
 	public void setCreatedAt(Time createdAt) {
 		this.createdAt = createdAt;
 	}
+
 	public boolean isOpen() {
 		return open;
 	}
+
 	public void setOpen(boolean open) {
 		this.open = open;
 	}
-	public ArrayList<Time> getTimes() {
-		return times;
-	}
-	public void setTimes(ArrayList<Time> times) {
-		this.times = times;
-	}
-	public ArrayList<Participant> getParticipants() {
-		return participants;
-	}
-	public void setParticipants(ArrayList<Participant> participants) {
-		this.participants = participants;
+
+	public Options getOptions() {
+		return options;
 	}
 
+	public void setOptions(Options options) {
+		this.options = options;
+	}
+	
 }

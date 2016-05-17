@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <polls>
     <poll>
-        <id>1462441249672</id>
+        <id>1463474926788</id>
         <title>Poll Title</title>
-        <creator>john.rahme.se@gmail.com</creator> <!-- This refers to a "User" -->
+        <creator>john.rahme.se@gmail.com</creator>
         <description>Poll Desciption</description>
         <location>Poll Location</location>
         <createdAt>
@@ -11,27 +11,50 @@
             <time>22:30</time>
         </createdAt>
         <open>true</open>
-		<options>
-			<option>
-				<date>2016-04-12</date>
-				<time>22:30</time>
-				<participants>
-					<participant>Mary</participant>
-					<participant>James</participant>
-					<participant>Richard</participant>
-				</participants>
-			</option>
-			<option>
-				<date>2016-04-13</date>
-				<time>22:34</time>
-				<participants>
-					<participant>James</participant>
-				</participants>
-			</option>
-		</options>
+        <Options>
+            <option>
+                <id>0</id>
+                <time>
+                    <date>2016-04-12</date>
+                    <time>22:30</time>
+                </time>
+                <participants>
+                    <participant>
+                        <name>Richard</name>
+                    </participant>
+                    <participant>
+                        <name>James</name>
+                    </participant>
+                    <participant>
+                        <name>Lisa</name>
+                    </participant>
+                </participants>
+            </option>
+            <option>
+                <id>1</id>
+                <time>
+                    <date>2016-04-13</date>
+                    <time>22:34</time>
+                </time>
+                <participants>
+                    <participant>
+                        <name>Richard</name>
+                    </participant>
+                    <participant>
+                        <name>James</name>
+                    </participant>
+                    <participant>
+                        <name>Lisa</name>
+                    </participant>
+                    <participant>
+                        <name>Lisa</name>
+                    </participant>
+                </participants>
+            </option>
+        </Options>
     </poll>
     <poll>
-        <id>1462441249672</id>
+        <id>1463474926788</id>
         <title>Poll Title2</title>
         <creator>test@test.se</creator>
         <description>Poll Desciption2</description>
@@ -41,24 +64,66 @@
             <time>22:30</time>
         </createdAt>
         <open>true</open>
-		<options>
-			<option>
-				<date>2016-04-17</date>
-				<time>22:30</time>
-				<participants>
-					<participant>Anne</participant>
-					<participant>Mary</participant>
-				</participants>
-			</option>
-			<option>
-				<date>2016-04-18</date>
-				<time>22:34</time>
-				<participants>
-					<participant>Richard</participant>
-					<participant>Andrew</participant>
-				</participants>
-			</option>
-		</options>
+        <Options>
+            <option>
+                <id>0</id>
+                <time>
+                    <date>2016-04-12</date>
+                    <time>22:30</time>
+                </time>
+                <participants>
+                    <participant>
+                        <name>Richard</name>
+                    </participant>
+                    <participant>
+                        <name>James</name>
+                    </participant>
+                </participants>
+            </option>
+            <option>
+                <id>1</id>
+                <time>
+                    <date>2016-04-13</date>
+                    <time>22:34</time>
+                </time>
+                <participants>
+                    <participant>
+                        <name>Richard</name>
+                    </participant>
+                    <participant>
+                        <name>James</name>
+                    </participant>
+                </participants>
+            </option>
+        </Options>
     </poll>
+    <poll>
+        <id>1463475466357</id>
+        <title>Poll Title3</title>
+        <creator>test@test.se</creator>
+        <description>Poll Desciption3</description>
+        <location>Poll Location3</location>
+        <createdAt>
+            <date>2016-04-12</date>
+            <time>22:60</time>
+        </createdAt>
+        <open>true</open>
+        <Options>
+            <option>
+                <id>0</id>
+                <time>
+                    <date>2016-04-12</date>
+                    <time>22:60</time>
+                </time>
+                <participants>
+                    <participant>
+                        <name>Samuel</name>
+                    </participant>
+                    <participant>
+                        <name>Lillian</name>
+                    </participant>
+                </participants>
+            </option>
+        </Options>
     </poll>
 </polls>

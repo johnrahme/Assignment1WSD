@@ -9,27 +9,19 @@ import javax.xml.bind.annotation.XmlAccessorType;
 public class Participant implements Serializable {
 
 	private String name;
-	private ArrayList<Time> times = new ArrayList<Time>();
 	
 	public Participant(){
 		
 	}
-	public Participant(String name, ArrayList<Time> times) {
+	public Participant(String name) {
 		super();
 		this.name = name;
-		this.times = times;
 	}
 	public String getName() {
 		return name;
 	}
 	public void setName(String name) {
 		this.name = name;
-	}
-	public ArrayList<Time> getTimes() {
-		return times;
-	}
-	public void setTimes(ArrayList<Time> times) {
-		this.times = times;
 	}
 
 }
