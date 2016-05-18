@@ -1,6 +1,11 @@
 package database;
 
 import java.io.Serializable;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -33,6 +38,12 @@ public class Time implements Serializable {
 	}
 	public void setTime(String time) {
 		this.time = time;
+	}
+	public void stringToTime(String strTime){
+		//Date conversion not working
+		
+		this.date = strTime.substring(0, 10);
+		this.time = strTime.substring(11);
 	}
 	
 	

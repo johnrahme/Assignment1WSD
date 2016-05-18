@@ -29,9 +29,14 @@
         		<textarea class = "form-control" name = "description" id = "description"></textarea>
         	</div>
         	<div class = "form-group">
+        		<label for = "location" class = "control-label">Location: </label>
+        		<input class = "form-control" name = "location" id = "location"></input>
+        	</div>
+        	<div class = "form-group">
         		<label for = "open" class = "control-label">Open: </label>
         		<input type = "checkbox" name = "open" id = "open">
         	</div>
+        	<button class = "btn btn-primary" type = "submit">Submit</button>
         </div>
 		<div class = 'col-sm-5'>
 		    <div id = "times">
@@ -40,7 +45,7 @@
 		        	     <div class = "col-sm-8">
 		        			<div class="form-group">
 				                <div class='input-group date'>
-				                    <input type='text' class="form-control" name = 'times[]'/>
+				                    <input type='text' class="form-control" name = 'times'/>
 				                    <span class="input-group-addon">
 				                        <span class="glyphicon glyphicon-calendar"></span>
 				                    </span>
@@ -77,7 +82,7 @@
             $(document).ready(function(){
             	$('#addTime').click(function(e){
                     e.preventDefault();
-                	$("#times").append("<div class = 'row time'><div class = 'col-sm-8'><div class='form-group'><div class='input-group date'><input type='text' class='form-control' name = 'times[]'/><span class='input-group-addon'><span class='glyphicon glyphicon-calendar'></span></span></div></div></div><div class = 'col-sm-4'><button class = 'btn btn-danger' id ='remove_time'>Remove</button></div></div>");
+                	$("#times").append("<div class = 'row time'><div class = 'col-sm-8'><div class='form-group'><div class='input-group date'><input type='text' class='form-control' name = 'times'/><span class='input-group-addon'><span class='glyphicon glyphicon-calendar'></span></span></div></div></div><div class = 'col-sm-4'><button class = 'btn btn-danger' id ='remove_time'>Remove</button></div></div>");
                 	updateDP();
             	});
 	            $("#times").on("click","#remove_time", function(e){ //user click on remove text

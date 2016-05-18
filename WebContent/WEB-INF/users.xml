@@ -1,37 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <users>
-	<user>
-		<profile>
-			<firstName>Richard</firstName>
-			<lastName>Nelson</lastName>
-			<email>richard.nelson@gmail.com</email>
-			<password>password</password>
-		</profile>
-		<poll>
-			<title>Let's meet up for some food!</title>
-			<description>This week we have our first food meeting!</description>
-			<location>UTS</location>
-			<createdAt>
-				<date></date>
-				<time></time>
-			</createdAt>
-			<time>
-				<year>2016</year>
-				<month>4</month>
-				<day>23</day>
-				<hour>3</hour>
-				<minute>30</minute>
-			</time>			
-			<participant>
-				<name>Alex</name>
-				<time>
-					<year>2016</year>
-					<month>4</month>
-					<day>23</day>
-					<hour>3</hour>
-					<minute>30</minute>
-				</time>
-			</participant>
-		</poll>
-	</user>
+    <user>
+        <firstName>John</firstName>
+        <lastName>Rahme</lastName>
+        <email>john.rahme.se@gmail.com</email>
+        <password>password</password>
+    </user>
+    <user>
+        <firstName>John</firstName>
+        <lastName>Rahme</lastName>
+        <email>john.rahme.se@gmail.com</email>
+        <password>password</password>
+    </user>
 </users>

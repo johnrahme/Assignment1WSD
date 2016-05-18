@@ -2,6 +2,10 @@ package database;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Marshaller;
@@ -95,5 +99,30 @@ public class PollHandler {
 	}
 	public void setPolls(Polls polls) {
 		this.polls = polls;
+	}
+	
+	public Poll getPollFromInput(String title, String creator, String description, String location, boolean open, String[] stringTimes){
+		ArrayList <Participant> participantList = new ArrayList<Participant>();
+		ArrayList <Option> optionList = new ArrayList<Option>();
+		
+		Participants participants = new Participants(participantList);	
+		
+		for(String time:stringTimes){
+			Time t = new Time();
+			t.stringToTime(time);
+			optionList.add(new Option(t,participants));
+		}
+		// find created at time
+		
+		DateFormat timeFormat = new SimpleDateFormat("HH:mm");
+		DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+		Date date = new Date();
+		String createdTime = (timeFormat.format(date));
+		String createdDate = (dateFormat.format(date));
+		Time createdAt = new Time(createdDate, createdTime);
+		
+		Options options = new Options(optionList);
+		Poll addedPoll = new Poll(System.currentTimeMillis(),title, creator, description, location, createdAt, open, options);
+		return addedPoll;
 	}
 }
