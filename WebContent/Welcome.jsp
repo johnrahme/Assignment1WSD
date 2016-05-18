@@ -8,7 +8,8 @@
 <link rel="stylesheet" type="text/css" href="styleSheet.css">
 <title>Home Page</title>
 </head>
-<body background ="meeting.jpg">
+<!-- <body background ="meeting.jpg">  -->
+
 
 <%
 // code to go here
@@ -16,8 +17,8 @@
 %>
 <form action="pollPage.jsp" method="POST">
 <table class = "login" align  = "right" cellpadding="10">
-<tr><td>Email</td><td><input type="text" name="email"></td>
-<td>Password</td><td><input type="text" name="password"></td>
+<tr><td>Email </td><td><input type="text" name="email"></td>
+<td>Password </td><td><input type="password" name="password"></td>
 <td><input type="submit" value="Login"></td>
 <td></td></tr>
 
