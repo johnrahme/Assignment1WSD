@@ -13,7 +13,7 @@ String description =  request.getParameter("description");
 String location =  request.getParameter("location");
 String [] times = request.getParameterValues("times");
 boolean open = false;
-if(request.getParameter("open").equals("on")){
+if(request.getParameter("open")!=null){
 	open = true;
 }
 
