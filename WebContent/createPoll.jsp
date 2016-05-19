@@ -22,15 +22,15 @@
 	<div class = "col-sm-7">
         	<div class = "form-group">
         		<label for = "title" class = "control-label">Title: </label>
-        		<input type = "text" class = "form-control" name = "title" id = "title">
+        		<input type = "text" class = "form-control" name = "title" id = "title" required>
         	</div>
         	<div class = "form-group">
         		<label for = "description" class = "control-label">Description: </label>
-        		<textarea class = "form-control" name = "description" id = "description"></textarea>
+        		<textarea class = "form-control" name = "description" id = "description" required></textarea>
         	</div>
         	<div class = "form-group">
         		<label for = "location" class = "control-label">Location: </label>
-        		<input class = "form-control" name = "location" id = "location"></input>
+        		<input class = "form-control" name = "location" id = "location" required></input>
         	</div>
         	<div class = "form-group">
         		<label for = "open" class = "control-label">Open: </label>
@@ -45,16 +45,13 @@
 		        	     <div class = "col-sm-8">
 		        			<div class="form-group">
 				                <div class='input-group date'>
-				                    <input type='text' class="form-control" name = 'times'/>
+				                    <input type='text' class="form-control" name = 'times' required/>
 				                    <span class="input-group-addon">
 				                        <span class="glyphicon glyphicon-calendar"></span>
 				                    </span>
 				               
 				                </div>
 			            	</div>
-		        		</div>
-		        		<div class = "col-sm-4">
-			        		<button class = "btn btn-danger" id = "remove_time">Remove</button>
 		        		</div>
 		        	</div>
 		        </div>
@@ -82,7 +79,7 @@
             $(document).ready(function(){
             	$('#addTime').click(function(e){
                     e.preventDefault();
-                	$("#times").append("<div class = 'row time'><div class = 'col-sm-8'><div class='form-group'><div class='input-group date'><input type='text' class='form-control' name = 'times'/><span class='input-group-addon'><span class='glyphicon glyphicon-calendar'></span></span></div></div></div><div class = 'col-sm-4'><button class = 'btn btn-danger' id ='remove_time'>Remove</button></div></div>");
+                	$("#times").append("<div class = 'row time'><div class = 'col-sm-8'><div class='form-group'><div class='input-group date'><input type='text' class='form-control' name = 'times' required/><span class='input-group-addon'><span class='glyphicon glyphicon-calendar'></span></span></div></div></div><div class = 'col-sm-4'><button class = 'btn btn-danger' id ='remove_time'>Remove</button></div></div>");
                 	updateDP();
             	});
 	            $("#times").on("click","#remove_time", function(e){ //user click on remove text

@@ -29,7 +29,6 @@ public class PollHandler {
 		// Now unmarshal the object from the file
 		FileInputStream fin = new FileInputStream(filePath);
 		polls = (Polls)u.unmarshal(fin); // This loads the "shop" object
-		System.out.println(polls.getList().size());
 		fin.close();
 	}
 	public void writeToXml() throws Exception{
@@ -101,6 +100,7 @@ public class PollHandler {
 		this.polls = polls;
 	}
 	
+	//Creates a poll from the form input values
 	public Poll getPollFromInput(String title, String creator, String description, String location, boolean open, String[] stringTimes){
 		ArrayList <Participant> participantList = new ArrayList<Participant>();
 		ArrayList <Option> optionList = new ArrayList<Option>();
