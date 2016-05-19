@@ -29,8 +29,8 @@ public class Polls implements Serializable {
 		Time t2 = new Time("2016-04-13", "22:34");
 		times.add(t1);
 		times.add(t2);
-		Participant part1 = new Participant("Richard");
-		Participant part2 = new Participant("James");
+		Participant part1 = new Participant("Richard", true);
+		Participant part2 = new Participant("James", false);
 		
 		participantList.add(part1);
 		participantList.add(part2);
