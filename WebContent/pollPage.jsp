@@ -19,7 +19,7 @@
 if(currentUser == null){%>
 <p>Password incorrect. Click <a href="Welcome.jsp">here</a> to try again.</p>
 <%}else{%>
-<p>Login successful. Welcome <%currentUser.getFirstName();%>.</p>
+<p>Login successful. Welcome <%=currentUser.getFirstName()%>.</p>
 
 <ul class="list-inline">
 
