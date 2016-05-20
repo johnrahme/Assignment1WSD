@@ -59,7 +59,7 @@
       </div>
     
       <div class="item">
-        <img src="Doom.jpg" alt="doom" width="460" height="345">
+        <img src="Doom.jpg" alt="" width="460" height="345">
         <div class="carousel-caption">
         <h3>Interaction</h3>
           <p>Interact with each other</p>
@@ -85,6 +85,24 @@
     </a>
   </div>
 </div>
+
+<footer class="container-fluid text-center" ">
+	<div class = "col-sm-4">
+	<h6>Copyright &copy 2016 Meeting Place</h6>
+	</div>
+	<div class = "col-sm-2">
+	<h6>About Us</h6>
+	<h6>Our Vision</h6>
+	<h6>History</h6>
+	</div>
+	<div class = "col-sm-2">
+	<h6>Contact Us</h6>
+	<h6>Employment Opportunities</h6>
+	<h6>Help</h6>
+	</div>
+	</div>
+  </form>
+</footer>
 </form>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>

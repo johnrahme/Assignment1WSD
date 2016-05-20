@@ -24,9 +24,9 @@ if(currentUser == null){%>
 <ul class="list-inline">
 
 <ul class="dropdown-menu">
-   <li><a href="#">Spiderman</a></li>
-   <li><a href="#">Captain America</a></li>
-   <li><a href="#">Iron Man</a></li>
+   <li><a href="#"></a></li>
+   <li><a href="#"></a></li>
+   <li><a href="#"></a></li>
 </ul>
 
 

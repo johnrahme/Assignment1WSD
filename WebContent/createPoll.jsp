@@ -14,7 +14,7 @@
 </style>
 <title>Insert title here</title>
 </head>
-<body>
+<body background = "meeting.jpg">
 <div class = "container">
 <h2>Add a poll!</h2>
 <div class="row">
