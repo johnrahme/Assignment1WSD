@@ -1,6 +1,8 @@
 package database;
 
 import java.io.Serializable;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 import javax.xml.bind.annotation.*;
@@ -110,5 +112,47 @@ public class Poll implements Serializable {
 	public void setOptions(Options options) {
 		this.options = options;
 	}
+	
+	//----Comparators START----
+	//Compare by title ascending
+	public static Comparator<Poll> PollTitleComparator = new Comparator<Poll>() {
+		public int compare(Poll p1, Poll p2) {
+			   String PollTitle1 = p1.getTitle();
+			   String PollTitle2 = p2.getTitle();
+			   return PollTitle1.compareTo(PollTitle2);
+
+		}
+	};
+	//Compare by creator
+	public static Comparator<Poll> PollCreatorComparator = new Comparator<Poll>() {
+		public int compare(Poll p1, Poll p2) {
+			   String PollTitle1 = p1.getCreator();
+			   String PollTitle2 = p2.getCreator();
+			   return PollTitle1.compareTo(PollTitle2);
+
+		}
+	};
+	//Compare by creator
+		public static Comparator<Poll> PollCreationComparator = new Comparator<Poll>() {
+			public int compare(Poll p1, Poll p2) {
+				   SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy/HH:mm");
+				   Date date1 = null;
+				   Date date2 = null;
+				try {
+					date1 = formatter.parse(p1.getCreatedAt().getDate()+"/"+p1.getCreatedAt().getTime());
+					date2 = formatter.parse(p2.getCreatedAt().getDate()+"/"+p2.getCreatedAt().getTime());
+				} catch (ParseException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				if(date1!=null&&date2!=null){
+					return date2.compareTo(date1);
+				}
+				return -1;
+				   
+
+			}
+		};
+	//----Comparators END----
 	
 }
