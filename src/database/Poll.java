@@ -3,16 +3,13 @@ package database;
 import java.io.Serializable;
 import java.util.*;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.*;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Poll implements Serializable {
 
 
-	@XmlElement(name = "id")
+	@XmlAttribute(name = "id")
 	private long id;
 	@XmlElement(name = "title")
 	private String title;
@@ -46,7 +43,7 @@ public class Poll implements Serializable {
 		this.open = open;
 		this.options = options;
 		//For now
-		this.id = System.currentTimeMillis();
+		//this.id = System.currentTimeMillis();
 	}
 
 

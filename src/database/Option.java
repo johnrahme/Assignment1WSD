@@ -3,14 +3,12 @@ package database;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.*;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Option implements Serializable{
 	
-	@XmlElement(name = "id")
+	@XmlAttribute(name="id")
 	private int id;
 	@XmlElement(name = "time")
 	private Time time;
