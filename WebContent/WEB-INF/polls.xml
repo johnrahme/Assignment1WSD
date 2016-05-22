@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <polls>
-    <poll>
-        <id>1463662738433</id>
+    <poll id="0">
         <title>Poll Title</title>
         <creator>john.rahme.se@gmail.com</creator>
         <description>Poll Desciption</description>
         <location>Poll Location</location>
         <createdAt>
-            <date>2016-04-12</date>
+            <date>12/04/2016</date>
             <time>22:30</time>
         </createdAt>
         <open>true</open>
         <Options>
-            <option>
-                <id>0</id>
+            <option id="0">
                 <time>
-                    <date>2016-04-12</date>
+                    <date>12/04/2016</date>
                     <time>22:30</time>
                 </time>
                 <participants>
@@ -29,10 +27,9 @@
                     </participant>
                 </participants>
             </option>
-            <option>
-                <id>1</id>
+            <option id="1">
                 <time>
-                    <date>2016-04-13</date>
+                    <date>13/04/2016</date>
                     <time>22:34</time>
                 </time>
                 <participants>
@@ -48,22 +45,20 @@
             </option>
         </Options>
     </poll>
-    <poll>
-        <id>1463662738433</id>
+    <poll id="1">
         <title>Poll Title2</title>
         <creator>test@test.se</creator>
         <description>Poll Desciption2</description>
         <location>Poll Location2</location>
         <createdAt>
-            <date>2016-04-12</date>
+            <date>12/04/2016</date>
             <time>22:30</time>
         </createdAt>
         <open>true</open>
         <Options>
-            <option>
-                <id>0</id>
+            <option id="0">
                 <time>
-                    <date>2016-04-12</date>
+                    <date>12/04/2016</date>
                     <time>22:30</time>
                 </time>
                 <participants>
@@ -77,10 +72,9 @@
                     </participant>
                 </participants>
             </option>
-            <option>
-                <id>1</id>
+            <option id="1">
                 <time>
-                    <date>2016-04-13</date>
+                    <date>13/04/2016</date>
                     <time>22:34</time>
                 </time>
                 <participants>

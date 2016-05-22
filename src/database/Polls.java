@@ -1,7 +1,7 @@
 package database;
 
 import java.io.Serializable;
-import java.util.ArrayList;
+import java.util.*;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -16,7 +16,6 @@ public class Polls implements Serializable {
 
 	
 	public Polls() {
-		
 	}
 
 	public void setExampleList(){
@@ -25,8 +24,8 @@ public class Polls implements Serializable {
 		ArrayList <Option> optionList = new ArrayList<Option>();
 		
 		
-		Time t1  = new Time("2016-04-12", "22:30");
-		Time t2 = new Time("2016-04-13", "22:34");
+		Time t1  = new Time("12/04/2016", "22:30");
+		Time t2 = new Time("13/04/2016", "22:34");
 		times.add(t1);
 		times.add(t2);
 		Participant part1 = new Participant("Richard", true);
@@ -44,8 +43,8 @@ public class Polls implements Serializable {
 		Options options = new Options(optionList);
 		Poll poll1 = new Poll(1,"Poll Title", "john.rahme.se@gmail.com", "Poll Desciption", "Poll Location", t1, true, options);
 		Poll poll2 = new Poll(2, "Poll Title2", "test@test.se", "Poll Desciption2", "Poll Location2", t1, true, options);
-		list.add(poll1);
-		list.add(poll2);
+		addPoll(poll1);
+		addPoll(poll2);
 	}
 	
 	public ArrayList<Poll> getList() {
@@ -54,9 +53,11 @@ public class Polls implements Serializable {
 
 	public void setList(ArrayList<Poll> list) {
 		this.list = list;
+		updatePollID();
 	}
     public void addPoll(Poll poll) {
         list.add(poll);
+        updatePollID();
     }
     public void removePoll(Poll poll) {
         list.remove(poll);
@@ -68,6 +69,36 @@ public class Polls implements Serializable {
     		returnString += poll.getId()+"\n";
     	}
     	return returnString;
+    }
+    private void updatePollID(){
+		// When an Options list is set add unique ID:s to all option objects
+		for(int i = 0; i<list.size(); i++){
+			list.get(i).setId(i);
+		}
+		
+	}
+    public void sortBy(String sortBy){
+		if(sortBy.equals("Title")){
+			Collections.sort(this.list, Poll.PollTitleComparator);
+		}
+		else if(sortBy.equals("Creator")){
+			Collections.sort(this.list, Poll.PollCreatorComparator);
+		}
+		else if(sortBy.equals("Creation")){
+			Collections.sort(this.list, Poll.PollCreationComparator);
+		}
+	}
+    public void filterOpenClosed(boolean open){
+    	ArrayList <Poll> bufferList = new ArrayList <Poll>();
+    	for(Poll p: list){
+    		if(p.isOpen()&&open){
+    			bufferList.add(p);
+    		}
+    		else if(!p.isOpen()&&!open){
+    			bufferList.add(p);
+    		}
+    	}
+    	list = bufferList;
     }
 	
 }
