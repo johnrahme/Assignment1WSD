@@ -39,7 +39,7 @@ for(Option o: currentPoll.getOptions().getList()){
 <!-- Code for displaying a poll END -->
 <%
 	//Redirect back to response page
-    String redirectURL = "pollResponses.jsp?id="+pollID;
+    String redirectURL = "pollResponsesXml.jsp?id="+pollID;
     response.sendRedirect(redirectURL);
 %>
 </body>

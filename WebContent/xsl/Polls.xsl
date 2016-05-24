@@ -1,26 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:template match="/">
-	<html>
-	 <head>
-		<title>Display Polls</title>
-	</head>
-	<body>
-		<table><xsl:apply-templates/></table>
-	 </body>
-	</html>
+		<table class="table table-striped table-bordered">
+			<tr>
+			<th>Title</th>
+			<th>Creator</th>
+			<th>Location</th>
+			<th>Creation Date/Time</th>
+			<th>View Details</th>
+			</tr>
+			<xsl:apply-templates/>
+		</table>
 	</xsl:template>
 	<xsl:template match="poll">
-	<tr>
-		<th>Title</th>
-		<th>Creator</th>
-		<th>Location</th>
-		<th>Creation Date/Time</th>
-		<th>View Details</th>
-	</tr>
+	<xsl:variable name="id">
+		<xsl:value-of select="@id"/>
+	</xsl:variable>
 	<tr>
 		<xsl:apply-templates/>
-		<td><a href="pollPage.jsp?id=[@id]">View</a></td>
+		<td><a href="pollPageXml.jsp?id={$id}"><button class = "btn btn-primary">View</button></a></td>
 	</tr>
 	</xsl:template>
 	<xsl:template match="poll/title">

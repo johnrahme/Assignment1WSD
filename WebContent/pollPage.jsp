@@ -29,29 +29,7 @@ if(pollID!=null){
 
 %>
 <!-- Code for displaying a poll END -->
-<% String filePath = application.getRealPath("WEB-INF/users.xml"); %>
-<jsp:useBean id="handler" class="database.UserHandler" scope="application">
-    <jsp:setProperty name="handler" property="filePath" value="<%=filePath%>"/>
-</jsp:useBean>
 
-<% User currentUser = handler.getUsers().login(request.getParameter("email"), request.getParameter("password"));
-if(currentUser == null){%>
-<p>Password incorrect. Click <a href="Welcome.jsp">here</a> to try again.</p>
-<%}else{%>
-<p>Login successful. Welcome <%=currentUser.getFirstName()%>.</p>
-
-<ul class="list-inline">
-
-<ul class="dropdown-menu">
-   <li><a href="#"></a></li>
-   <li><a href="#"></a></li>
-   <li><a href="#"></a></li>
-</ul>
-
-
- <li><a href="#">Logout</a></li>
-</ul>
-<%}%>
 
 <!-- Display poll information START -->
 <%if(currentPoll != null){ %>
