@@ -9,24 +9,22 @@
 <title>Home Page</title>
 </head>
 <!-- <body background ="meeting.jpg">  -->
+<body>
 
+<%User currentUser = (User)session.getAttribute("currentUser");%>
 
-<%
-// code to go here
-
-%>
-<form action="pollPage.jsp" method="POST">
-<table class = "login" align  = "right" cellpadding="10">
-<tr><td>Email </td><td><input type="text" name="email"></td>
-<td>Password </td><td><input type="password" name="password"></td>
-<td><input type="submit" value="Login"></td>
-<td></td></tr>
-
-</table>
-
-<div class = "text">
-<p>Welcome <%//to person logged in %></p>
-
+<%if(currentUser != null) {%>
+<p align="right">Welcome <%=currentUser.getFirstName()%></p>
+<%}else{%>
+<div align="right">
+<form method="post" action="register.jsp">
+<input type="submit" value="Register">
+</form>
+<form method="post" action="login.jsp">
+<input type="submit" value="Login">
+</form>
+</div>
+<%}%>
 
 <div class="container">
   <br>
