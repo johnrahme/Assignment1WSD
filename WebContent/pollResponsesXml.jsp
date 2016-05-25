@@ -28,7 +28,7 @@ if(pollID!=null){
 <!-- Create the XML START-->
 <!-- Create the XML END-->
 <c:set var="xmltext">
-<Options>
+<options>
 	<%for(Option o: currentPoll.getOptions().getList()){ %>
             <option id="<%=o.getId()%>">
                 <time>
@@ -47,7 +47,7 @@ if(pollID!=null){
                 </participants>
             </option>
      <%} %>
-  </Options>
+  </options>
 </c:set>
 <!-- Create the XML END-->
 <c:import url="xsl/Options.xsl" var="xslt"/>

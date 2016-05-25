@@ -10,7 +10,7 @@
             <time>22:30</time>
         </createdAt>
         <open>true</open>
-        <Options>
+        <options>
             <option id="0">
                 <time>
                     <date>12/04/2016</date>
@@ -43,7 +43,7 @@
                     </participant>
                 </participants>
             </option>
-        </Options>
+        </options>
     </poll>
     <poll id="1">
         <title>Poll Title2</title>
@@ -55,7 +55,7 @@
             <time>22:30</time>
         </createdAt>
         <open>true</open>
-        <Options>
+        <options>
             <option id="0">
                 <time>
                     <date>12/04/2016</date>
@@ -88,6 +88,6 @@
                     </participant>
                 </participants>
             </option>
-        </Options>
+        </options>
     </poll>
 </polls>

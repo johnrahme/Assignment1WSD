@@ -25,7 +25,7 @@ public class Poll implements Serializable {
 	private Time createdAt;
 	@XmlElement(name = "open")
 	private boolean open;
-	@XmlElement(name = "Options")
+	@XmlElement(name = "options")
 	private Options options;
 	
 	public Poll(){

@@ -37,24 +37,24 @@
 		Created at time: <xsl:apply-templates/><br></br>
 	</xsl:template>
 	<xsl:template match="open"/>
-	<xsl:template match="Options">
+	<xsl:template match="options">
 		<h2>Register</h2>	
 		<xsl:apply-templates/>
 	</xsl:template>
-	<xsl:template match="Options/option">
+	<xsl:template match="options/option">
 		<xsl:variable name="id">
 			<xsl:value-of select="@id"/>
 		</xsl:variable>
 		<xsl:apply-templates/><input type="checkbox" name="{$id}"></input><br></br>
 	</xsl:template>
-	<xsl:template match="Options/option/participants"/>
-	<xsl:template match="Options/option/time">
+	<xsl:template match="options/option/participants"/>
+	<xsl:template match="options/option/time">
 		<xsl:apply-templates/>
 	</xsl:template>
-	<xsl:template match="Options/option/time/date">
+	<xsl:template match="options/option/time/date">
 		<xsl:apply-templates/> at 
 	</xsl:template>
-	<xsl:template match="Options/option/time/time">
+	<xsl:template match="options/option/time/time">
 		<xsl:apply-templates/>
 	</xsl:template>
 </xsl:stylesheet>

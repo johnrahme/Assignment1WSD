@@ -38,7 +38,7 @@ if(pollID!=null){
             <time><%=currentPoll.getCreatedAt().getTime()%></time>
         </createdAt>
         <open><%=currentPoll.isOpen()%></open>
-        <Options>
+        <options>
         <%for(Option o:currentPoll.getOptions().getList()){ %>
             <option id="<%=o.getId()%>">
                 <time>
@@ -55,7 +55,7 @@ if(pollID!=null){
                 </participants>
             </option>
         <%} %>
-        </Options>
+        </options>
     </poll>
 </c:set>
 <!-- Create the XML END-->

@@ -16,10 +16,10 @@
 		<xsl:apply-templates/>
 	</xsl:template>
 	<xsl:template match="option/participants">
-		<xsl:apply-templates/>
+		<ul><xsl:apply-templates/></ul>
 	</xsl:template>
 	<xsl:template match="option/participants/participant">
-		<ul><xsl:apply-templates/></ul>
+		<xsl:apply-templates/>
 	</xsl:template>
 	<xsl:template match="option/participants/participant/name">
 		<li><xsl:apply-templates/></li>

@@ -41,5 +41,5 @@
 		<xsl:apply-templates/>
 	</xsl:template>
 	<xsl:template match="poll/open"/>
-	<xsl:template match="poll/Options"/>
+	<xsl:template match="poll/options"/>
 </xsl:stylesheet>
