@@ -11,6 +11,10 @@ import javax.xml.bind.annotation.*;
 public class Poll implements Serializable {
 
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -8894367978881973424L;
 	@XmlAttribute(name = "id")
 	private long id;
 	@XmlElement(name = "title")

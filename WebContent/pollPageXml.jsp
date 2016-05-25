@@ -40,7 +40,8 @@ if(pollID!=null){
         <open><%=currentPoll.isOpen()%></open>
         <options>
         <%for(Option o:currentPoll.getOptions().getList()){ %>
-            <option id="<%=o.getId()%>">
+            <option>
+            	<id><%=o.getId()%></id>
                 <time>
                     <date><%=o.getTime().getDate()%></date>
                     <time><%=o.getTime().getTime()%></time>

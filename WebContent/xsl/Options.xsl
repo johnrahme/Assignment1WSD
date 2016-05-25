@@ -6,6 +6,7 @@
 	<xsl:template match="option">
 		<xsl:apply-templates/>
 	</xsl:template>
+	<xsl:template match="option/id"/>
 	<xsl:template match="option/time">
 		<h4><xsl:apply-templates/></h4>
 	</xsl:template>

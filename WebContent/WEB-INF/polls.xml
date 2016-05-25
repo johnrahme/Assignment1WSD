@@ -11,7 +11,8 @@
         </createdAt>
         <open>true</open>
         <options>
-            <option id="0">
+            <option>
+                <id>0</id>
                 <time>
                     <date>12/04/2016</date>
                     <time>22:30</time>
@@ -27,7 +28,8 @@
                     </participant>
                 </participants>
             </option>
-            <option id="1">
+            <option>
+                <id>1</id>
                 <time>
                     <date>13/04/2016</date>
                     <time>22:34</time>
@@ -56,7 +58,8 @@
         </createdAt>
         <open>true</open>
         <options>
-            <option id="0">
+            <option>
+                <id>0</id>
                 <time>
                     <date>12/04/2016</date>
                     <time>22:30</time>
@@ -72,7 +75,8 @@
                     </participant>
                 </participants>
             </option>
-            <option id="1">
+            <option>
+                <id>1</id>
                 <time>
                     <date>13/04/2016</date>
                     <time>22:34</time>

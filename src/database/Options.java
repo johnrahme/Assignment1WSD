@@ -6,11 +6,14 @@ import java.util.ArrayList;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Options implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -5617279588316737551L;
 	@XmlElement(name="option")
 	private ArrayList<Option> list = new ArrayList<Option>();
 

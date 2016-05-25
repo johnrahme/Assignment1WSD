@@ -43,10 +43,11 @@
 	</xsl:template>
 	<xsl:template match="options/option">
 		<xsl:variable name="id">
-			<xsl:value-of select="@id"/>
+			<xsl:value-of select="id"/>
 		</xsl:variable>
 		<xsl:apply-templates/><input type="checkbox" name="{$id}"></input><br></br>
 	</xsl:template>
+	<xsl:template match="options/option/id"/>
 	<xsl:template match="options/option/participants"/>
 	<xsl:template match="options/option/time">
 		<xsl:apply-templates/>

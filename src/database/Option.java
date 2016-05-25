@@ -1,14 +1,17 @@
 package database;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 
 import javax.xml.bind.annotation.*;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Option implements Serializable{
 	
-	@XmlAttribute(name="id")
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -460458780174444627L;
+	@XmlElement(name="id")
 	private int id;
 	@XmlElement(name = "time")
 	private Time time;
