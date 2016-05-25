@@ -34,51 +34,87 @@ public class PollServiceSOAP {
 		   return pollHand;
 		  }
 		 }
+	private UserHandler getUserHandler() throws Exception {
+		  // The web server can handle requests from different clients in parallel.
+		  // These are called "threads".
+		  //
+		  // We do NOT want other threads to manipulate the application object at the same
+		  // time that we are manipulating it, otherwise bad things could happen.
+		  //
+		  // The "synchronized" keyword is used to lock the application object while
+		  // we're manpulating it.
+		  ServletContext application = (ServletContext)context.getMessageContext().get(MessageContext.SERVLET_CONTEXT);
+		  synchronized (application) {
+		   UserHandler userHand = null;
+		   //pollHand = (PollHandler)application.getAttribute("pollHand");
+		   if (userHand == null) {
+			   userHand = new UserHandler();
+			   userHand.setFilePath(application.getRealPath("WEB-INF/users.xml"));
+		    application.setAttribute("userHand", userHand);
+		   }
+		   return userHand;
+		  }
+		 }
+	
+	//Add a poll, if the login provided is not a valid user return -1, otherwise return the id of the poll created
 	@WebMethod
-	public Options fetchOptions(){
+	public int addPoll(String email, String password, Poll poll){
+		UserHandler uh = null;
 		PollHandler ph = null;
 		try {
+			uh = getUserHandler();
 			ph = getPollHandler();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}	
-		return ph.getPolls().getList().get(0).getOptions();
-	}
-	@WebMethod
-	public Poll getPoll(){
-		PollHandler ph = null;
-		Poll pTest = new Poll();
-		Options options = new Options();
-		options.getList().add(new Option());
-		pTest.setOptions(options);
-		try {
-			ph = getPollHandler();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			return -1;
 		}
-		return (Poll)pTest;
-	}
-	@WebMethod
-	public Poll[] getPolls(){
-		PollHandler ph = null;
-		try {
-			ph = getPollHandler();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		User loggedInUser = uh.getUsers().login(email, password);
+		if(loggedInUser!=null){
+			try {
+				ph.addPoll(poll);
+				return ph.getPolls().getList().size();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 		}
-		Polls polls = new Polls();
-		polls.setExampleList();
-		Poll[] returnArray = new Poll[polls.getList().size()];
-		returnArray = polls.getList().toArray(returnArray);
-		
-		
-		return (Poll[])returnArray;
+		return -1;
 	}
 	
-	 @WebMethod
+	@WebMethod
+	public String changePollStatus(String email, String password, int id, boolean status ){
+		UserHandler uh = null;
+		PollHandler ph = null;
+		try {
+			uh = getUserHandler();
+			ph = getPollHandler();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return "Error creating handlers";
+		}
+		User user = uh.getUsers().login(email, password);
+		if(user == null){
+			return "Invalid login details";
+		}
+		for(Poll p: ph.getPolls().getList()){
+			if(p.getId()==id&&p.getCreator().equals(user.getEmail())){
+				try {
+					ph.setOpen(id, status);
+					return "Poll status successfully changed";
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+					return "Could not change status";
+					
+				}
+				
+			}
+		}
+		return "Poll not found";
+	}
+	
+	@WebMethod
 	public Polls fetchPolls(String email, String status, int minRes){
 		 PollHandler ph = null;
 		try {

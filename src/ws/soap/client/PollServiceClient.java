@@ -9,12 +9,10 @@ public class PollServiceClient{
 	  PollServiceSOAPServiceLocator locator = new PollServiceSOAPServiceLocator();
 	  try {
 		PollServiceSOAP soapService = locator.getPollServiceSOAPPort();
-		Option[] options = soapService.fetchOptions();
-		Poll p = soapService.getPoll();
-		Poll[] polls = soapService.getPolls();
+		
 		Poll[] polls2 = soapService.fetchPolls(null,"closed", 0);
 		for(Poll poll: polls2){
-			System.out.println(poll.getTitle());
+			System.out.println(soapService.changePollStatus("john.rahme.se@gmail.com", "password",0, true));
 		}
 	} catch (ServiceException e) {
 		// TODO Auto-generated catch block

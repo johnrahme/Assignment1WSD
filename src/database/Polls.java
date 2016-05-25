@@ -71,7 +71,7 @@ public class Polls implements Serializable {
     	return returnString;
     }
     private void updatePollID(){
-		// When an Options list is set add unique ID:s to all option objects
+		// When an Polls list is set add unique ID:s to all option objects
 		for(int i = 0; i<list.size(); i++){
 			list.get(i).setId(i);
 		}
