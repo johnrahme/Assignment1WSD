@@ -8,22 +8,42 @@
 package ws.soap.client;
 
 public class Option  implements java.io.Serializable {
+    private int id;
+
     private ws.soap.client.Time time;
 
     private ws.soap.client.Participant[] participants;
-
-    private int id;  // attribute
 
     public Option() {
     }
 
     public Option(
+           int id,
            ws.soap.client.Time time,
-           ws.soap.client.Participant[] participants,
-           int id) {
+           ws.soap.client.Participant[] participants) {
+           this.id = id;
            this.time = time;
            this.participants = participants;
-           this.id = id;
+    }
+
+
+    /**
+     * Gets the id value for this Option.
+     * 
+     * @return id
+     */
+    public int getId() {
+        return id;
+    }
+
+
+    /**
+     * Sets the id value for this Option.
+     * 
+     * @param id
+     */
+    public void setId(int id) {
+        this.id = id;
     }
 
 
@@ -66,26 +86,6 @@ public class Option  implements java.io.Serializable {
         this.participants = participants;
     }
 
-
-    /**
-     * Gets the id value for this Option.
-     * 
-     * @return id
-     */
-    public int getId() {
-        return id;
-    }
-
-
-    /**
-     * Sets the id value for this Option.
-     * 
-     * @param id
-     */
-    public void setId(int id) {
-        this.id = id;
-    }
-
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof Option)) return false;
@@ -98,13 +98,13 @@ public class Option  implements java.io.Serializable {
         __equalsCalc = obj;
         boolean _equals;
         _equals = true && 
+            this.id == other.getId() &&
             ((this.time==null && other.getTime()==null) || 
              (this.time!=null &&
               this.time.equals(other.getTime()))) &&
             ((this.participants==null && other.getParticipants()==null) || 
              (this.participants!=null &&
-              java.util.Arrays.equals(this.participants, other.getParticipants()))) &&
-            this.id == other.getId();
+              java.util.Arrays.equals(this.participants, other.getParticipants())));
         __equalsCalc = null;
         return _equals;
     }
@@ -116,6 +116,7 @@ public class Option  implements java.io.Serializable {
         }
         __hashCodeCalc = true;
         int _hashCode = 1;
+        _hashCode += getId();
         if (getTime() != null) {
             _hashCode += getTime().hashCode();
         }
@@ -130,7 +131,6 @@ public class Option  implements java.io.Serializable {
                 }
             }
         }
-        _hashCode += getId();
         __hashCodeCalc = false;
         return _hashCode;
     }
@@ -141,12 +141,13 @@ public class Option  implements java.io.Serializable {
 
     static {
         typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.ws/", "option"));
-        org.apache.axis.description.AttributeDesc attrField = new org.apache.axis.description.AttributeDesc();
-        attrField.setFieldName("id");
-        attrField.setXmlName(new javax.xml.namespace.QName("", "id"));
-        attrField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        typeDesc.addFieldDesc(attrField);
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("id");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "id"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("time");
         elemField.setXmlName(new javax.xml.namespace.QName("", "time"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://soap.ws/", "time"));

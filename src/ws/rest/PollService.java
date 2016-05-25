@@ -39,8 +39,12 @@ public class PollService {
 @GET
 @Produces(MediaType.APPLICATION_XML)
 public Polls getPolls(@QueryParam("email") String email, @QueryParam("status") String status,@QueryParam("minResponses") int minRes ) throws Exception{
-	PollHandler ph = getPollHandler();	
+	PollHandler ph = getPollHandler();
 	Polls returnPolls = ph.getPolls();
+	if(email == null && status == null && minRes==0){
+		ph.getPolls().filterOpenClosed(true);
+		return ph.getPolls();
+	}
 	if(email !=null){
 		returnPolls = ph.getPolls(email);
 	}

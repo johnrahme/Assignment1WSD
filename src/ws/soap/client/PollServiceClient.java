@@ -4,17 +4,18 @@ import java.rmi.RemoteException;
 
 import javax.xml.rpc.ServiceException;
 
-public class PollServiceClient {
+public class PollServiceClient{
 	 public static void main(String[] args) {
 	  PollServiceSOAPServiceLocator locator = new PollServiceSOAPServiceLocator();
 	  try {
 		PollServiceSOAP soapService = locator.getPollServiceSOAPPort();
 		Option[] options = soapService.fetchOptions();
-		String p = soapService.getPoll().getDescription();
-		//Poll[] polls = soapService.fetchPolls(null, null, 0);
-		//System.out.println(p.getDescription());
-		
-		
+		Poll p = soapService.getPoll();
+		Poll[] polls = soapService.getPolls();
+		Poll[] polls2 = soapService.fetchPolls(null,"closed", 0);
+		for(Poll poll: polls2){
+			System.out.println(poll.getTitle());
+		}
 	} catch (ServiceException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();

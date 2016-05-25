@@ -86,7 +86,11 @@ public class PollServiceSOAP {
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}	
+		}
+		if(email == null && status == null && minRes==0){
+			ph.getPolls().filterOpenClosed(true);
+			return ph.getPolls();
+		}
 			Polls returnPolls = ph.getPolls();
 			if(email !=null){
 				returnPolls = ph.getPolls(email);

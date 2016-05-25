@@ -335,7 +335,7 @@ public class Poll  implements java.io.Serializable {
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("options");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "Options"));
+        elemField.setXmlName(new javax.xml.namespace.QName("", "options"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://soap.ws/", "option"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);

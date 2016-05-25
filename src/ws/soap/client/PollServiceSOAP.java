@@ -8,8 +8,8 @@
 package ws.soap.client;
 
 public interface PollServiceSOAP extends java.rmi.Remote {
-    public ws.soap.client.Option[] fetchOptions() throws java.rmi.RemoteException;
     public ws.soap.client.Poll getPoll() throws java.rmi.RemoteException;
-    public ws.soap.client.Poll[] fetchPolls(java.lang.String arg0, java.lang.String arg1, int arg2) throws java.rmi.RemoteException;
     public ws.soap.client.Poll[] getPolls() throws java.rmi.RemoteException;
+    public ws.soap.client.Option[] fetchOptions() throws java.rmi.RemoteException;
+    public ws.soap.client.Poll[] fetchPolls(java.lang.String arg0, java.lang.String arg1, int arg2) throws java.rmi.RemoteException;
 }
