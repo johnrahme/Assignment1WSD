@@ -48,13 +48,17 @@ public class PollServiceSOAP {
 	@WebMethod
 	public Poll getPoll(){
 		PollHandler ph = null;
+		Poll pTest = new Poll();
+		Options options = new Options();
+		options.getList().add(new Option());
+		pTest.setOptions(options);
 		try {
 			ph = getPollHandler();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return ph.getPolls().getList().get(0);
+		return (Poll)pTest;
 	}
 	@WebMethod
 	public Poll[] getPolls(){
@@ -65,11 +69,13 @@ public class PollServiceSOAP {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		Polls polls = new Polls();
+		polls.setExampleList();
+		Poll[] returnArray = new Poll[polls.getList().size()];
+		returnArray = polls.getList().toArray(returnArray);
 		
-		Poll[] returnArray = new Poll[ph.getPolls().getList().size()];
-		returnArray = ph.getPolls().getList().toArray(returnArray);
 		
-		return returnArray;
+		return (Poll[])returnArray;
 	}
 	
 	 @WebMethod
@@ -109,6 +115,6 @@ public class PollServiceSOAP {
 				}
 				returnPolls = bufferPolls;
 			}
-		return returnPolls;
+		return (Polls)returnPolls;
 	 }
 }

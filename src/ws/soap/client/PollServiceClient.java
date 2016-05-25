@@ -9,9 +9,9 @@ public class PollServiceClient {
 	  PollServiceSOAPServiceLocator locator = new PollServiceSOAPServiceLocator();
 	  try {
 		PollServiceSOAP soapService = locator.getPollServiceSOAPPort();
-		//Option[] options = soapService.fetchOptions();
-		Poll[] polls = soapService.getPolls();
-		//Poll p = soapService.getPoll();
+		Option[] options = soapService.fetchOptions();
+		String p = soapService.getPoll().getDescription();
+		//Poll[] polls = soapService.fetchPolls(null, null, 0);
 		//System.out.println(p.getDescription());
 		
 		

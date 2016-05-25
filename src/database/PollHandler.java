@@ -72,7 +72,7 @@ public class PollHandler {
 		
 	}
 	// Add a participant to the specific poll
-	//Not working atm
+	
 	public void addParticipant(long pollId, int optionId, Participant participant)throws Exception{
 		int id = getIdOfPoll(pollId);
 		if(id > -1){
