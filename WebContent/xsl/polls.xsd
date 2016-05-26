@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://addressbook.wsd.uts.edu.au" 
+	xmlns="http://addressbook.wsd.uts.edu.au" 
+	elementFormDefault="qualified">
+	
+	<xs:element name="polls" type="polls"/>
+	
+	<xs:complexType name="polls">
+	<xs:sequence>
+		<xs:element name="poll" type="poll" minOccurs="0" maxOccurs="unbounded"/>
+	</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="poll">
+    <xs:sequence>
+		<xs:element name="title" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      	<xs:element name="creator" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      	<xs:element name="location" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      	<xs:element name="createdAt" type="timeslot" minOccurs="1" maxOccurs="1"/>
+      	<xs:element name="open" type="xs:boolean" minOccurs="1" maxOccurs="1"/>
+      	<xs:element name="options" type="options" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="timeslot">
+	<xs:sequence>
+		<xs:element name="date" type="xs:date" minOccurs="1" maxOccurs="1"/>
+		<xs:element name="time" type="xs:time" minOccurs="1" maxOccurs="1"/>
+	</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="options">
+	<xs:sequence>
+		<xs:element name="option" type="option" minOccurs="0" maxOccurs="unbounded"/>
+	</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="option">
+	<xs:sequence>
+		<xs:element name="id" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+		<xs:element name="time" type="timeslot" minOccurs="1" maxOccurs="1"/>
+		<xs:element name="participants" type="participants" minOccurs="1" maxOccurs="unbounded"/>
+	</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="participants">
+	<xs:sequence>
+		<xs:element name="participant" type="participant" minOccurs="1" maxOccurs="unbounded"/>
+	</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="participant">
+	<xs:sequence>
+		<xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		<xs:element name="available" type="xs:boolean" minOccurs="1" maxOccurs="1"/>
+	</xs:sequence>
+	</xs:complexType>
+</xs:schema>
