@@ -13,7 +13,7 @@ public class Option implements Serializable{
 	private static final long serialVersionUID = -460458780174444627L;
 	@XmlElement(name="id")
 	private int id;
-	@XmlElement(name = "time")
+	@XmlElement(name = "timeslot")
 	private Time time;
 	@XmlElement(name = "participants")
 	private Participants participants;

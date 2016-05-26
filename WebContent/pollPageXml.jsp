@@ -42,10 +42,10 @@ if(pollID!=null){
         <%for(Option o:currentPoll.getOptions().getList()){ %>
             <option>
             	<id><%=o.getId()%></id>
-                <time>
+                <timeslot>
                     <date><%=o.getTime().getDate()%></date>
                     <time><%=o.getTime().getTime()%></time>
-                </time>
+                </timeslot>
                 <participants>
                 	<%for(Participant p:o.getParticipants().getList()){ %>
                     <participant>

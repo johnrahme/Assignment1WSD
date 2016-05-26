@@ -7,13 +7,13 @@
 		<xsl:apply-templates/>
 	</xsl:template>
 	<xsl:template match="option/id"/>
-	<xsl:template match="option/time">
+	<xsl:template match="option/timeslot">
 		<h4><xsl:apply-templates/></h4>
 	</xsl:template>
-	<xsl:template match="option/time/date">
+	<xsl:template match="option/timeslot/date">
 		<xsl:apply-templates/> at 
 	</xsl:template>
-	<xsl:template match="option/time/time">
+	<xsl:template match="option/timeslot/time">
 		<xsl:apply-templates/>
 	</xsl:template>
 	<xsl:template match="option/participants">

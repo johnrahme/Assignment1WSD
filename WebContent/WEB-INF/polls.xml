@@ -13,10 +13,10 @@
         <options>
             <option>
                 <id>0</id>
-                <time>
+                <timeslot>
                     <date>12/04/2016</date>
                     <time>22:30</time>
-                </time>
+                </timeslot>
                 <participants>
                     <participant>
                         <name>Richard</name>
@@ -30,10 +30,10 @@
             </option>
             <option>
                 <id>1</id>
-                <time>
+                <timeslot>
                     <date>13/04/2016</date>
                     <time>22:34</time>
-                </time>
+                </timeslot>
                 <participants>
                     <participant>
                         <name>Richard</name>
@@ -60,10 +60,10 @@
         <options>
             <option>
                 <id>0</id>
-                <time>
+                <timeslot>
                     <date>12/04/2016</date>
                     <time>22:30</time>
-                </time>
+                </timeslot>
                 <participants>
                     <participant>
                         <name>Richard</name>
@@ -77,10 +77,10 @@
             </option>
             <option>
                 <id>1</id>
-                <time>
+                <timeslot>
                     <date>13/04/2016</date>
                     <time>22:34</time>
-                </time>
+                </timeslot>
                 <participants>
                     <participant>
                         <name>Richard</name>

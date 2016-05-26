@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" import = "database.*"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -7,6 +7,15 @@
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link rel = "stylesheet" type = "text/css" href = "css/bootstrap-datetimepicker.css">
 <link rel="stylesheet" type="text/css" href="styleSheet.css">
+
+<%User currentUser = (User)session.getAttribute("currentUser");
+if(currentUser == null){
+	String redirectURL = "login.jsp";
+    response.sendRedirect(redirectURL);
+}
+
+%>
+
 <style>
 .btn {
     margin-bottom: 10px; 

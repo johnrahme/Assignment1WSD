@@ -31,7 +31,12 @@ try{
 catch(Exception e){
 	out.println(e.toString());
 }
-Poll p = pollHandler.getPollFromInput(title, "Creator not set", description, location, open, times);
+User currentUser = (User)session.getAttribute("currentUser");
+String creator = "Creator not set";
+if(currentUser!=null){
+	creator = currentUser.getEmail();
+}
+Poll p = pollHandler.getPollFromInput(title, creator, description, location, open, times);
 pollHandler.addPoll(p);
 
 %>

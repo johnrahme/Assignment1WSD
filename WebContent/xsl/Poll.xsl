@@ -49,13 +49,13 @@
 	</xsl:template>
 	<xsl:template match="options/option/id"/>
 	<xsl:template match="options/option/participants"/>
-	<xsl:template match="options/option/time">
+	<xsl:template match="options/option/timeslot">
 		<xsl:apply-templates/>
 	</xsl:template>
-	<xsl:template match="options/option/time/date">
+	<xsl:template match="options/option/timeslot/date">
 		<xsl:apply-templates/> at 
 	</xsl:template>
-	<xsl:template match="options/option/time/time">
+	<xsl:template match="options/option/timeslot/time">
 		<xsl:apply-templates/>
 	</xsl:template>
 </xsl:stylesheet>
