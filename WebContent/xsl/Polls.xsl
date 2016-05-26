@@ -18,7 +18,7 @@
 	</xsl:variable>
 	<tr>
 		<xsl:apply-templates/>
-		<td><a href="pollPageXml.jsp?id={$id}"><button class = "btn btn-primary">View</button></a></td>
+		<td><a href="pollPage.jsp?id={$id}"><button class = "btn btn-primary">View</button></a></td>
 	</tr>
 	</xsl:template>
 	<xsl:template match="poll/title">
