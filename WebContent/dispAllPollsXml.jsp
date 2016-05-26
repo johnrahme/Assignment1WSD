@@ -1,7 +1,12 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml" %>
-<c:import url="WEB-INF/polls.xml" var= "xmltext"/>
 <c:import url="xsl/Polls.xsl" var="xslt"/>
+<c:set var="xmltext">
+<jsp:include page="pollsToXml.jsp">
+        <jsp:param name="status" value="open"/>
+</jsp:include>
+</c:set>
+
 <html>
 	 <head>
 	 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
