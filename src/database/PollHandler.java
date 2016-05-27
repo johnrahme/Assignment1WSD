@@ -113,15 +113,19 @@ public class PollHandler {
 		}
 		// find created at time
 		
+		Time createdAt = getCurrentTimeObject();
+		
+		Options options = new Options(optionList);
+		Poll addedPoll = new Poll(System.currentTimeMillis(),title, creator, description, location, createdAt, open, options);
+		return addedPoll;
+	}
+	public Time getCurrentTimeObject(){
 		DateFormat timeFormat = new SimpleDateFormat("HH:mm");
 		DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 		Date date = new Date();
 		String createdTime = (timeFormat.format(date));
 		String createdDate = (dateFormat.format(date));
 		Time createdAt = new Time(createdDate, createdTime);
-		
-		Options options = new Options(optionList);
-		Poll addedPoll = new Poll(System.currentTimeMillis(),title, creator, description, location, createdAt, open, options);
-		return addedPoll;
+		return createdAt;
 	}
 }

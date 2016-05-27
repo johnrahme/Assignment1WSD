@@ -72,8 +72,11 @@ public class PollServiceSOAP {
 		User loggedInUser = uh.getUsers().login(email, password);
 		if(loggedInUser!=null){
 			try {
+				Time createdAt = ph.getCurrentTimeObject();
+				poll.setCreatedAt(createdAt);
+				poll.setCreator(loggedInUser.getEmail());
 				ph.addPoll(poll);
-				return ph.getPolls().getList().size();
+				return ph.getPolls().getList().size()-1;
 			} catch (Exception e) {
 				e.printStackTrace();
 			}

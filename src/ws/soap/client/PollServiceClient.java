@@ -24,7 +24,7 @@ public class PollServiceClient{
 		Option opt1 = new Option(0, t1,participants);
 		Option [] options = {opt1};
 		
-		Poll addedPoll = new Poll("Poll Title 6", "test@test2.se", "Poll Desciption6", "Poll Location6", t1, true, options, 3);
+		Poll addedPoll = new Poll("Poll Title 7", null, "Poll Desciption7", "Poll Location7", null, false, options, 0);
 		System.out.println(soapService.addPoll("john.rahme.se@gmail.com", "password", addedPoll));
 	} catch (ServiceException e) {
 		// TODO Auto-generated catch block
