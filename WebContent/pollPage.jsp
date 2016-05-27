@@ -7,23 +7,20 @@
 </jsp:useBean>
 <%
 String pollID = request.getParameter("id");
-String filePathPoll = application.getRealPath("WEB-INF/polls.xml");
-try{
-	pollHand.setFilePath(filePathPoll);
-}
-catch(Exception e){
-	out.println(e.toString());
-}
 Poll currentPoll = null;
 if(pollID!=null){
+	String filePathPoll = application.getRealPath("WEB-INF/polls.xml");
+	try{
+		pollHand.setFilePath(filePathPoll);
+	}
+	catch(Exception e){
+		out.println(e.toString());
+	}
+	
+	
 	currentPoll = pollHand.getPolls().getList().get(Integer.parseInt(pollID));
-}
 
 %>
-<%if(currentPoll == null){
-	String redirectURL = "dispAllPollsXml.jsp";
-    response.sendRedirect(redirectURL);
-}%>
 <!-- Code for displaying a poll END -->
 <!-- Create the XML START-->
 <!-- Create the XML END-->
@@ -68,9 +65,17 @@ if(pollID!=null){
 		<title>Display Poll</title>
 	</head>
 	<body>
+	<div class="container clear-top" style="box-shadow: 0px 0px 5px 2px #888888; background-color: #fff; padding: 18px">
+	<!-- Content of page goes here -->
 	<x:transform xml="${xmltext}" xslt="${xslt}"/>
-	
+	<!-- Content of page ends here -->
+	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	</body>
 </html>
+<% }
+else {
+	String redirectURL = "main.jsp";
+    response.sendRedirect(redirectURL);
+}%>

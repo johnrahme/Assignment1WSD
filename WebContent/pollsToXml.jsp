@@ -14,6 +14,7 @@ catch(Exception e){
 
 String email = request.getParameter("user");
 String status = request.getParameter("status");
+String sortBy = request.getParameter("sort");
 
 Polls polls = pollHand.getPolls();
 if(email != null){
@@ -24,6 +25,9 @@ if(status.equals("open")){
 }
 else if(status.equals("closed")){
 	polls.filterOpenClosed(false);
+}
+if(sortBy != null){
+	pollHand.getPolls().sortBy(sortBy);
 }
 
 %>

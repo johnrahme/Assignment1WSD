@@ -10,23 +10,20 @@
 </head>
 <!-- <body background ="meeting.jpg">  -->
 <body>
-
+<div class="container clear-top" style="box-shadow: 0px 0px 5px 2px #888888; background-color: #fff; padding: 18px">
 <%User currentUser = (User)session.getAttribute("currentUser");%>
 
 <%if(currentUser != null) {%>
 <p align="right">Welcome <%=currentUser.getFirstName()%></p>
 <%}else{%>
 <div align="right">
-<form method="post" action="register.jsp">
-<input type="submit" value="Register">
-</form>
-<form method="post" action="login.jsp">
-<input type="submit" value="Login">
-</form>
+<a href = "register.jsp" role = "button" class = "btn btn-default">Register</a>
+<a href = "login.jsp" role = "button" class = "btn btn-default">Login</a>
 </div>
+
 <%}%>
 
-<div class="container">
+
   <br>
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -82,9 +79,12 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
-</div>
 
-<footer class="container-fluid text-center" ">
+
+
+</div>
+<footer class="footer">
+<div class = "container">
 	<div class = "col-sm-4">
 	<h6>Copyright &copy 2016 Meeting Place</h6>
 	</div>
@@ -98,10 +98,8 @@
 	<h6>Employment Opportunities</h6>
 	<h6>Help</h6>
 	</div>
-	</div>
-  </form>
+</div>
 </footer>
-</form>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>

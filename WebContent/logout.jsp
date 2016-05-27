@@ -8,7 +8,13 @@
 <title>Logout</title>
 </head>
 <body>
-	<% session.invalidate(); %>
-	<p>You have been logged out. Click <a href="Welcome.jsp">here</a> to return to the main page.</p>
+	<% session.removeAttribute("currentUser");%>
+	<%
+	//Redirect back to main page
+	session.setAttribute("message", "You have been logged out");
+	session.setAttribute("messageType", "info");
+    String redirectURL = "main.jsp";
+    response.sendRedirect(redirectURL);
+	%>
 </body>
 </html>

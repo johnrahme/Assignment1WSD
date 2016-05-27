@@ -24,7 +24,7 @@ if(currentUser == null){
 <title>Insert title here</title>
 </head>
 <body background = "meeting.jpg">
-<div class = "container">
+<div class="container clear-top" style="box-shadow: 0px 0px 5px 2px #888888; background-color: #fff; padding: 18px">
 <h2>Add a poll!</h2>
 <div class="row">
 	<form method = "POST" action = "storePoll.jsp">

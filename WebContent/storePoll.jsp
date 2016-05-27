@@ -40,6 +40,13 @@ Poll p = pollHandler.getPollFromInput(title, creator, description, location, ope
 pollHandler.addPoll(p);
 
 %>
-<h1>Poll has been saved!</h1>
+
+<%
+	//Redirect back to response page
+	session.setAttribute("message", "Poll has been created!");
+	session.setAttribute("messageType", "success");
+    String redirectURL = "main.jsp";
+    response.sendRedirect(redirectURL);
+%>
 </body>
 </html>

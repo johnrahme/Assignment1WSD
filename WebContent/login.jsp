@@ -4,9 +4,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="styleSheet.css">
 <title>Login</title>
 </head>
 <body>
+<div class="container clear-top" style="box-shadow: 0px 0px 5px 2px #888888; background-color: #fff; padding: 18px">
 <h1 align="center">Login</h1>
 
 <% String filePath = application.getRealPath("WEB-INF/users.xml"); %>
@@ -22,12 +25,43 @@ handler.getUsers().addUser(newUser);
 <%}%>
 
 <form action="profile.jsp" method="POST">
-<table align="center" cellpadding="10">
-<tr><td>Email </td><td><input type="text" name="email"></td></tr>
-<tr><td>Password </td><td><input type="password" name="password"></td></tr>
-<tr><td></td><td><input type="submit" value="Login"></td></tr>
+<table align="center" cellpadding="90">
+
+<div class = "row">
+	<div class = "col-md-4">
+	</div>
+	<div class = "col-md-4">
+	<div class = "form-group">
+        		<label for = "title" class = "control-label">Email:</label>
+        		<input class = "form-control" type="text" name="email">
+	</div>
+	</div>
+</div>
+
+<div class = "row">
+	<div class = "col-md-4">
+	</div>
+	<div class = "col-md-4">
+		<div class = "form-group">
+        		<label for = "title" class = "control-label">Password: </label>
+        		<input class = "form-control" type="password" name="password">
+		</div>
+	</div>
+</div>
+
+<div class = "row">
+	<div class = "col-md-4">
+	</div>
+	<div class = "col-md-4">
+		<input class = "btn btn-primary" type="submit" value="Login">
+	</div>
+</div>
+
 
 </table>
 </form>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
 </html>
