@@ -11,9 +11,7 @@ public class PollServiceClient{
 		PollServiceSOAP soapService = locator.getPollServiceSOAPPort();
 		
 		Poll[] polls2 = soapService.fetchPolls(null,"closed", 0);
-		for(Poll poll: polls2){
-			System.out.println(soapService.changePollStatus("john.rahme.se@gmail.com", "password",0, true));
-		}
+		//System.out.println(soapService.addPoll("john.rahme.se@gmail.com", "password", testPoll));
 	} catch (ServiceException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();

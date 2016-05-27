@@ -10,7 +10,7 @@ package ws.soap.client;
 public class Option  implements java.io.Serializable {
     private int id;
 
-    private ws.soap.client.Time time;
+    private ws.soap.client.Time timeslot;
 
     private ws.soap.client.Participant[] participants;
 
@@ -19,10 +19,10 @@ public class Option  implements java.io.Serializable {
 
     public Option(
            int id,
-           ws.soap.client.Time time,
+           ws.soap.client.Time timeslot,
            ws.soap.client.Participant[] participants) {
            this.id = id;
-           this.time = time;
+           this.timeslot = timeslot;
            this.participants = participants;
     }
 
@@ -48,22 +48,22 @@ public class Option  implements java.io.Serializable {
 
 
     /**
-     * Gets the time value for this Option.
+     * Gets the timeslot value for this Option.
      * 
-     * @return time
+     * @return timeslot
      */
-    public ws.soap.client.Time getTime() {
-        return time;
+    public ws.soap.client.Time getTimeslot() {
+        return timeslot;
     }
 
 
     /**
-     * Sets the time value for this Option.
+     * Sets the timeslot value for this Option.
      * 
-     * @param time
+     * @param timeslot
      */
-    public void setTime(ws.soap.client.Time time) {
-        this.time = time;
+    public void setTimeslot(ws.soap.client.Time timeslot) {
+        this.timeslot = timeslot;
     }
 
 
@@ -99,9 +99,9 @@ public class Option  implements java.io.Serializable {
         boolean _equals;
         _equals = true && 
             this.id == other.getId() &&
-            ((this.time==null && other.getTime()==null) || 
-             (this.time!=null &&
-              this.time.equals(other.getTime()))) &&
+            ((this.timeslot==null && other.getTimeslot()==null) || 
+             (this.timeslot!=null &&
+              this.timeslot.equals(other.getTimeslot()))) &&
             ((this.participants==null && other.getParticipants()==null) || 
              (this.participants!=null &&
               java.util.Arrays.equals(this.participants, other.getParticipants())));
@@ -117,8 +117,8 @@ public class Option  implements java.io.Serializable {
         __hashCodeCalc = true;
         int _hashCode = 1;
         _hashCode += getId();
-        if (getTime() != null) {
-            _hashCode += getTime().hashCode();
+        if (getTimeslot() != null) {
+            _hashCode += getTimeslot().hashCode();
         }
         if (getParticipants() != null) {
             for (int i=0;
@@ -148,8 +148,8 @@ public class Option  implements java.io.Serializable {
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("time");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "time"));
+        elemField.setFieldName("timeslot");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "timeslot"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://soap.ws/", "time"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);

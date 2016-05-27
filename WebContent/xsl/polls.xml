@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<polls>
+
+<polls xmlns="http://www.uts.edu.au/31284/wsd-diary"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.uts.edu.au/31284/wsd-diary polls.xsd">
     <poll id="0">
-        <title>Poll Title eye</title>
+        <title>Poll Title</title>
         <creator>john.rahme.se@gmail.com</creator>
         <description>Poll Desciption</description>
         <location>Poll Location</location>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<users xmlns="http://www.uts.edu.au/31284/wsd-diary"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.uts.edu.au/31284/wsd-diary users.xsd">
+    <user>
+        <firstName>John</firstName>
+        <lastName>Rahme</lastName>
+        <email>john.rahme.se@gmail.com</email>
+        <password>password</password>
+    </user>
+    <user>
+        <firstName>Luna</firstName>
+        <lastName>Lovegood</lastName>
+        <email>nargles@thequibbler.co.uk</email>
+        <password>snorkack</password>
+    </user>
+	<user>
+        <firstName>Rita</firstName>
+        <lastName>Skeeter</lastName>
+        <email>rskeeter@daily-prophet.co.uk</email>
+        <password>quickquotes</password>
+    </user>
+    	<user>
+        <firstName>Newton</firstName>
+        <lastName>Scamander</lastName>
+        <email>magical.beasts.division@macusa.com</email>
+        <password>beasties</password>
+    </user>
+    	<user>
+        <firstName>Severus</firstName>
+        <lastName>Snape</lastName>
+        <email>brewfamebottleglory@hogwarts.co.uk</email>
+        <password>asphodel</password>
+    </user>
+	<user>
+        <firstName>Sirius</firstName>
+        <lastName>Black</lastName>
+        <email>padfoot@we-are-marauders.co.uk</email>
+        <password>serious</password>
+    </user>
+</users>

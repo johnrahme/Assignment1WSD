@@ -44,16 +44,16 @@ public class PollServiceSOAPProxy implements ws.soap.client.PollServiceSOAP {
     return pollServiceSOAP;
   }
   
-  public ws.soap.client.Poll[] fetchPolls(java.lang.String arg0, java.lang.String arg1, int arg2) throws java.rmi.RemoteException{
-    if (pollServiceSOAP == null)
-      _initPollServiceSOAPProxy();
-    return pollServiceSOAP.fetchPolls(arg0, arg1, arg2);
-  }
-  
   public int addPoll(java.lang.String arg0, java.lang.String arg1, ws.soap.client.Poll arg2) throws java.rmi.RemoteException{
     if (pollServiceSOAP == null)
       _initPollServiceSOAPProxy();
     return pollServiceSOAP.addPoll(arg0, arg1, arg2);
+  }
+  
+  public ws.soap.client.Poll[] fetchPolls(java.lang.String arg0, java.lang.String arg1, int arg2) throws java.rmi.RemoteException{
+    if (pollServiceSOAP == null)
+      _initPollServiceSOAPProxy();
+    return pollServiceSOAP.fetchPolls(arg0, arg1, arg2);
   }
   
   public java.lang.String changePollStatus(java.lang.String arg0, java.lang.String arg1, int arg2, boolean arg3) throws java.rmi.RemoteException{

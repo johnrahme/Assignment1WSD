@@ -59,7 +59,7 @@ if(pollID!=null){
 		<title>Poll Responses</title>
 	</head>
 	<body>
-	<h2>Poll responses for the poll: </h2>
+	<h2>Poll responses for the poll:<%=currentPoll.getTitle()%> </h2>
 	<x:transform xml="${xmltext}" xslt="${xslt}"/>
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
