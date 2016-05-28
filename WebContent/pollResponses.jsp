@@ -38,11 +38,11 @@ if(pollID!=null){
                 </timeslot>
                 <participants>
                 <%for(Participant p: o.getParticipants().getList()){ 
-                	if(p.isAvailable()){
+                	if(true){
                 %>
                     <participant>
                         <name><%=p.getName() %></name>
-                        <available>true</available>
+                        <available><%=p.isAvailable() %></available>
                     </participant>
                     <%}}%>
                 </participants>
@@ -63,7 +63,7 @@ if(pollID!=null){
         <jsp:param name="active" value="createPoll"/>
 	</jsp:include>
 	<div class="container clear-top" style="box-shadow: 0px 0px 5px 2px #888888; background-color: #fff; padding: 18px">
-	<h2>Poll responses for the poll:<%=currentPoll.getTitle()%> </h2>
+	<h3>Poll responses for the poll: <%=currentPoll.getTitle()%> </h3>
 	<x:transform xml="${xmltext}" xslt="${xslt}"/>
 	</div>
 	<jsp:include page="footer.jsp"/>

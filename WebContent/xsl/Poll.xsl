@@ -2,7 +2,12 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:template match="/">
 		<form method = "POST" action = "storeParticipant.jsp">
+			<div class = "col-md-6">
+			<h2>Information</h2>	
 			<xsl:apply-templates/>
+			</div>
+			<div class =  "col-md-4">
+			<h2>Register</h2>
 			<div class = "form-group">
 				<label class = "form-label">Name: </label>
 				<input class = "form-control" name = "name" id = "name" type = "text"></input>
@@ -12,10 +17,10 @@
 			</xsl:variable>
 			<input type = "hidden" name = "id" value = "{$id}"></input>
 			<button type = "submit" class = "btn btn-success">Register</button>
+			</div>
 		</form>
 	</xsl:template>
 	<xsl:template match="title">
-		<h2>Information</h2>	
 		Title: <xsl:apply-templates/><br></br>
 	</xsl:template>
 	<xsl:template match="creator">
@@ -38,7 +43,7 @@
 	</xsl:template>
 	<xsl:template match="open"/>
 	<xsl:template match="options">
-		<h2>Register</h2>	
+		<h3>Time slots</h3>	
 		<xsl:apply-templates/>
 	</xsl:template>
 	<xsl:template match="options/option">
