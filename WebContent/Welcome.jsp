@@ -10,6 +10,9 @@
 </head>
 <!-- <body background ="meeting.jpg">  -->
 <body>
+<jsp:include page="NavBar.jsp">
+        <jsp:param name="active" value="createPoll"/>
+</jsp:include>
 <div class="container clear-top" style="box-shadow: 0px 0px 5px 2px #888888; background-color: #fff; padding: 18px">
 <%User currentUser = (User)session.getAttribute("currentUser");%>
 
@@ -83,23 +86,7 @@
 
 
 </div>
-<footer class="footer">
-<div class = "container">
-	<div class = "col-sm-4">
-	<h6>Copyright &copy 2016 Meeting Place</h6>
-	</div>
-	<div class = "col-sm-2">
-	<h6>About Us</h6>
-	<h6>Our Vision</h6>
-	<h6>History</h6>
-	</div>
-	<div class = "col-sm-2">
-	<h6>Contact Us</h6>
-	<h6>Employment Opportunities</h6>
-	<h6>Help</h6>
-	</div>
-</div>
-</footer>
+<jsp:include page="footer.jsp"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>

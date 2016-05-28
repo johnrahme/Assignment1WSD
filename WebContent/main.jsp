@@ -22,6 +22,9 @@
 		<title>Display Polls</title>
 	</head>
 	<body>
+	<jsp:include page="NavBar.jsp">
+        <jsp:param name="active" value="createPoll"/>
+	</jsp:include>
 	<div class="container clear-top" style="box-shadow: 0px 0px 5px 2px #888888; background-color: #fff; padding: 18px">
 	<!-- Print message START -->
 	<%if(session.getAttribute("message")!=null){%>
@@ -48,6 +51,7 @@
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    
+	<jsp:include page="footer.jsp"/>
 	</body>
+	
 </html>
