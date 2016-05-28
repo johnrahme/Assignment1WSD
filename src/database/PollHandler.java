@@ -71,6 +71,14 @@ public class PollHandler {
 		}
 		
 	}
+	//Get poll from id
+	public Poll getPoll(int pollId){
+		int id = getIdOfPoll(pollId);
+		if(id>-1){
+			return polls.getList().get(id);
+		}
+		return null;
+	}
 	// Add a participant to the specific poll
 	
 	public void addParticipant(long pollId, int optionId, Participant participant)throws Exception{

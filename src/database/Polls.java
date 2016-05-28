@@ -78,13 +78,13 @@ public class Polls implements Serializable {
 		
 	}
     public void sortBy(String sortBy){
-		if(sortBy.equals("Title")){
+		if(sortBy.toLowerCase().equals("title")){
 			Collections.sort(this.list, Poll.PollTitleComparator);
 		}
-		else if(sortBy.equals("Creator")){
+		else if(sortBy.toLowerCase().equals("creator")){
 			Collections.sort(this.list, Poll.PollCreatorComparator);
 		}
-		else if(sortBy.equals("Creation")){
+		else if(sortBy.toLowerCase().equals("creation")){
 			Collections.sort(this.list, Poll.PollCreationComparator);
 		}
 	}

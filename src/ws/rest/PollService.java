@@ -23,7 +23,6 @@ public class PollService {
   // we're manpulating it.
   synchronized (application) {
 	PollHandler pollHand = null;
-	
 	//Dunno if we need this...Should ask
     //PollHandler pollHand = (PollHandler)application.getAttribute("pollHand");
    if (pollHand == null) {
@@ -38,10 +37,10 @@ public class PollService {
 @Path("polls")
 @GET
 @Produces(MediaType.APPLICATION_XML)
-public Polls getPolls(@QueryParam("email") String email, @QueryParam("status") String status,@QueryParam("minResponses") int minRes ) throws Exception{
+public Polls getPolls(@QueryParam("email") String email, @QueryParam("status") String status,@QueryParam("minResponses") int minRes, @QueryParam("sort") String sort ) throws Exception{
 	PollHandler ph = getPollHandler();
 	Polls returnPolls = ph.getPolls();
-	if(email == null && status == null && minRes==0){
+	if(email == null && status == null && minRes==0 && sort == null){
 		ph.getPolls().filterOpenClosed(true);
 		return ph.getPolls();
 	}
@@ -71,6 +70,10 @@ public Polls getPolls(@QueryParam("email") String email, @QueryParam("status") S
 			}
 		}
 		returnPolls = bufferPolls;
+	}
+	
+	if(sort != null){
+		returnPolls.sortBy(sort);
 	}
 	return returnPolls;
 }

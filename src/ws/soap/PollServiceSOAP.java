@@ -118,7 +118,7 @@ public class PollServiceSOAP {
 	}
 	
 	@WebMethod
-	public Polls fetchPolls(String email, String status, int minRes){
+	public Polls fetchPolls(String email, String status, int minRes, String sort){
 		 PollHandler ph = null;
 		try {
 			ph = getPollHandler();
@@ -158,6 +158,9 @@ public class PollServiceSOAP {
 				}
 				returnPolls = bufferPolls;
 			}
+		if(sort != null){
+			returnPolls.sortBy(sort);
+		}
 		return (Polls)returnPolls;
 	 }
 }

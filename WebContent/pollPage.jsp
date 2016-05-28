@@ -18,7 +18,9 @@ if(pollID!=null){
 	}
 	
 	
-	currentPoll = pollHand.getPolls().getList().get(Integer.parseInt(pollID));
+	currentPoll = pollHand.getPoll(Integer.parseInt(pollID));
+}
+if(currentPoll != null){
 
 %>
 <!-- Code for displaying a poll END -->
