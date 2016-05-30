@@ -13,6 +13,14 @@
         <jsp:param name="active" value="home"/>
 </jsp:include>
 <div class="container clear-top" style="box-shadow: 0px 0px 5px 2px #888888; background-color: #fff; padding: 18px">
+<%if(session.getAttribute("message")!=null){%>
+	<div class="alert alert-<%=session.getAttribute("messageType")%>">
+	  	<%=session.getAttribute("message")%>
+	</div>
+	<%
+		session.removeAttribute("message");
+		session.removeAttribute("messageType");
+	} %>
 <h1 align="center">Login</h1>
 
 <% String filePath = application.getRealPath("WEB-INF/users.xml"); %>

@@ -15,28 +15,55 @@
 <div class="container clear-top" style="box-shadow: 0px 0px 5px 2px #888888; background-color: #fff; padding: 18px">
 	<form method="post" action="login.jsp">
 	<h1 align="center">Register</h1>
-	<table align="center" cellpadding="10">
-		<tr>
-			<td>First Name</td>
-			<td><input type="text" name="firstName"></td>
-		</tr>
-		<tr>
-			<td>Last Name</td>
-			<td><input type="text" name="lastName"></td>
-		</tr>
-		<tr>
-			<td>Email</td>
-			<td><input type="text" name="email"></td>
-		</tr>
-		<tr>
-			<td>Password</td>
-			<td><input type="password" name="password"></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td><input type="submit" value="Register"></td>
-		</tr>
-	</table>
+		<div class = "row">
+			<div class = "col-md-4">
+			</div>
+			<div class = "col-md-4">
+				<div class = "form-group">
+	        		<label for = "title" class = "control-label">First Name</label>
+	        		<input class = "form-control" type="text" name="firstName" required>
+				</div>
+			</div>
+		</div>
+		<div class = "row">
+			<div class = "col-md-4">
+			</div>
+			<div class = "col-md-4">
+				<div class = "form-group">
+	        		<label for = "lastName" class = "control-label">Last Name</label>
+	        		<input class = "form-control" type="text" name="lastName" required>
+				</div>
+			</div>
+		</div>
+		<div class = "row">
+			<div class = "col-md-4">
+			</div>
+			<div class = "col-md-4">
+				<div class = "form-group">
+	        		<label for = "email" class = "control-label">Email</label>
+	        		<input class = "form-control" type="email" name="email" required>
+				</div>
+			</div>
+		</div>
+		<div class = "row">
+			<div class = "col-md-4">
+			</div>
+			<div class = "col-md-4">
+				<div class = "form-group">
+	        		<label for = "email" class = "control-label">Password</label>
+	        		<input class = "form-control" type="password" name="password" required>
+				</div>
+			</div>
+		</div>
+		<div class = "row">
+			<div class = "col-md-4">
+			</div>
+			<div class = "col-md-4">
+				<div class = "form-group">
+	        		<button class = "btn btn-success" type = "submit">Register</button>
+				</div>
+			</div>
+		</div>
 	</form>
 </div>
 <jsp:include page="footer.jsp"/>

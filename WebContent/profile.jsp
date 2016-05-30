@@ -7,6 +7,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css"
+	href="styleSheet.css">
 
 <%
 	String filePath = application.getRealPath("WEB-INF/users.xml");
@@ -21,6 +23,10 @@
 	if (currentUser == null)
 		currentUser = handler.getUsers().login(request.getParameter("email"), request.getParameter("password"));
 	if (currentUser == null) {
+		session.setAttribute("message", "Wrong password!");
+		session.setAttribute("messageType", "danger");
+		String redirectURL = "login.jsp";
+		response.sendRedirect(redirectURL);
 %>
 <p>
 	Password incorrect. Click <a href="login.jsp">here</a> to try again.

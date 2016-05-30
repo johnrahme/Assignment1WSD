@@ -6,18 +6,23 @@
 			<h2>Information</h2>	
 			<xsl:apply-templates/>
 			</div>
-			<div class =  "col-md-4">
-			<h2>Register</h2>
-			<div class = "form-group">
-				<label class = "form-label">Name: </label>
-				<input class = "form-control" name = "name" id = "name" type = "text"></input>
-			</div>
-			<xsl:variable name="id">
-				<xsl:value-of select="/*/@id"/>
-			</xsl:variable>
-			<input type = "hidden" name = "id" value = "{$id}"></input>
-			<button type = "submit" class = "btn btn-success">Register</button>
-			</div>
+			<xsl:if test="/*/open='true'">
+				<div class =  "col-md-4">
+				<xsl:variable name="id">
+					<xsl:value-of select="/*/@id"/>
+				</xsl:variable>
+				
+				<h2>Register</h2>
+				<div class = "form-group">
+					<label class = "form-label">Name: </label>
+					<input class = "form-control" name = "name" id = "name" type = "text"></input>
+				</div>
+				
+				<input type = "hidden" name = "id" value = "{$id}"></input>
+				<button type = "submit" class = "btn btn-success">Register</button>
+				</div>
+			</xsl:if>
+			
 		</form>
 	</xsl:template>
 	<xsl:template match="title">
