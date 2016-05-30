@@ -63,7 +63,7 @@ h3{
       </div>
     
       <div class="item">
-        <img src="interaction.jpg" alt="Interaction">
+        <img src="Interaction.jpg" alt="Interaction">
         <!-- image taken from https://thesocialtrainer.files.wordpress.com/2012/12/social-interaction.jpg (resized) -->
         <div class="carousel-caption">
         <h3>Interaction</h3>
