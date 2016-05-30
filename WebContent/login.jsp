@@ -21,6 +21,10 @@
 		session.removeAttribute("message");
 		session.removeAttribute("messageType");
 	} %>
+<ol class="breadcrumb">
+		  <li><a href="index.jsp">Home</a></li>
+		  <li class="active">Login</li>
+		</ol>
 <h1 align="center">Login</h1>
 
 <% String filePath = application.getRealPath("WEB-INF/users.xml"); %>

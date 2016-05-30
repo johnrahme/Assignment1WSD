@@ -36,6 +36,11 @@
 		session.removeAttribute("messageType");
 	} %>
 	<!-- Print message END -->
+	
+		<ol class="breadcrumb">
+		  <li><a href="index.jsp">Home</a></li>
+		  <li class="active">View polls</li>
+		</ol>
 	<x:transform xml="${xmltext}" xslt="${xslt}"/>
 	<form method = "GET">
 		<div class = "form-group">

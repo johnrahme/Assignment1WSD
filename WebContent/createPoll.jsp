@@ -31,7 +31,7 @@ if(currentUser == null){
 <div class="container clear-top" style="box-shadow: 0px 0px 5px 2px #888888; background-color: #fff; padding: 18px">
 
 <ol class="breadcrumb">
-  <li><a href="#">Home</a></li>
+  <li><a href="index.jsp">Home</a></li>
   <li class="active">Create poll</li>
 </ol>
 <h2>Add a poll!</h2>

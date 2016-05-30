@@ -63,6 +63,12 @@ if(pollID!=null){
         <jsp:param name="active" value="main"/>
 	</jsp:include>
 	<div class="container clear-top" style="box-shadow: 0px 0px 5px 2px #888888; background-color: #fff; padding: 18px">
+	<ol class="breadcrumb">
+	  <li><a href="index.jsp">Home</a></li>
+	  <li><a href="main.jsp">View polls</a></li>
+	  <li><a href="pollPage.jsp?id=<%=currentPoll.getId()%>"><%=currentPoll.getTitle()%></a></li>
+	  <li class="active">Responses</li>
+	</ol>
 	<h3>Poll responses for the poll: <%=currentPoll.getTitle()%> </h3>
 	<x:transform xml="${xmltext}" xslt="${xslt}"/>
 	</div>

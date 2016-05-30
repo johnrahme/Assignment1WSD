@@ -15,7 +15,7 @@ if(currentUser != null){%>
       <a class="navbar-brand">The Meeting Room</a>
     </div>
     <ul class="nav navbar-nav">
-      <li <%if(active.equals("home")){ %>class="active"<%} %>><a href="Welcome.jsp">Home</a></li>
+      <li <%if(active.equals("home")){ %>class="active"<%} %>><a href="index.jsp">Home</a></li>
       <li <%if(active.equals("create")){ %>class="active"<%} %>><a href="createPoll.jsp">Create Poll</a></li>
       <li <%if(active.equals("profile")){ %>class="active"<%} %>><a href="profile.jsp"> Your Profile</a></li>
       <li <%if(active.equals("main")){ %>class="active"<%} %>><a href="main.jsp">View Polls</a></li>
@@ -33,7 +33,7 @@ if(currentUser != null){%>
 	      <a class="navbar-brand">The Meeting Room</a>
 	    </div>
 	    <ul class="nav navbar-nav">
-	      <li <%if(active.equals("home")){ %>class="active"<%} %>><a href="Welcome.jsp">Home</a></li>
+	      <li <%if(active.equals("home")){ %>class="active"<%} %>><a href="index.jsp">Home</a></li>
 	      <li <%if(active.equals("main")){ %>class="active"<%} %>><a href="main.jsp">View Polls</a></li>
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
