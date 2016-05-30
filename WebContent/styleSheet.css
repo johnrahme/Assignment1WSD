@@ -1,22 +1,8 @@
 @CHARSET "ISO-8859-1";
 
-table.login{
-	text-align:left;
-
+body{
+	background-image:url("meeting.jpg");
 }
-td{	
-	   border: 5px;
-}
+/* background image taken from http://thenextweb.com/wp-content/blogs.dir/1/files/2015/04/meeting.jpg */
 
 
-
-div.text{
-	position:relative;
-	color:black;
-	top:250px;
-	font-family: "Arial", "Helvetica", "sans-serif";
-	margin-left:500px;
-	text-align: left;
-	font-size:18px;
-	
-}	

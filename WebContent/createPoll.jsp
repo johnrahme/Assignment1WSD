@@ -18,15 +18,15 @@ if(currentUser == null){
 %>
 
 <style>
-.btn {
+.spaceButton {
     margin-bottom: 10px; 
 }
 </style>
-<title>Insert title here</title>
+<title>Create poll</title>
 </head>
 <body background = "meeting.jpg">
 <jsp:include page="NavBar.jsp">
-        <jsp:param name="active" value="createPoll"/>
+        <jsp:param name="active" value="create"/>
 </jsp:include>
 <div class="container clear-top" style="box-shadow: 0px 0px 5px 2px #888888; background-color: #fff; padding: 18px">
 
@@ -54,7 +54,7 @@ if(currentUser == null){
         		<label for = "open" class = "control-label">Open: </label>
         		<input type = "checkbox" name = "open" id = "open">
         	</div>
-        	<button class = "btn btn-primary" type = "submit">Submit</button>
+        	<button class = "btn btn-primary spaceButton" type = "submit">Submit</button>
         </div>
 		<div class = 'col-sm-5'>
 		    <div id = "times">
@@ -73,7 +73,7 @@ if(currentUser == null){
 		        		</div>
 		        	</div>
 		        </div>
-		        <button class = "btn btn-success" id = "addTime">Add time</button>
+		        <button class = "btn btn-success spaceButton" id = "addTime">Add time</button>
 	    </div>
     </form>
 </div>
@@ -98,7 +98,7 @@ if(currentUser == null){
             $(document).ready(function(){
             	$('#addTime').click(function(e){
                     e.preventDefault();
-                	$("#times").append("<div class = 'row time'><div class = 'col-sm-8'><div class='form-group'><div class='input-group date'><input type='text' class='form-control' name = 'times' required/><span class='input-group-addon'><span class='glyphicon glyphicon-calendar'></span></span></div></div></div><div class = 'col-sm-4'><button class = 'btn btn-danger' id ='remove_time'>Remove</button></div></div>");
+                	$("#times").append("<div class = 'row time'><div class = 'col-sm-8'><div class='form-group'><div class='input-group date'><input type='text' class='form-control' name = 'times' required/><span class='input-group-addon'><span class='glyphicon glyphicon-calendar'></span></span></div></div></div><div class = 'col-sm-4'><button class = 'btn btn-danger spaceButton' id ='remove_time'>Remove</button></div></div>");
                 	updateDP();
             	});
 	            $("#times").on("click","#remove_time", function(e){ //user click on remove text

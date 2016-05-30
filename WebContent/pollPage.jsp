@@ -68,7 +68,7 @@ if(currentPoll != null){
 	</head>
 	<body>
 	<jsp:include page="NavBar.jsp">
-        <jsp:param name="active" value="createPoll"/>
+        <jsp:param name="active" value="main"/>
 	</jsp:include>
 	<div class="container clear-top" style="box-shadow: 0px 0px 5px 2px #888888; background-color: #fff; padding: 18px">
 	<!-- Content of page goes here -->
