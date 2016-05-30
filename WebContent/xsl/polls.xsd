@@ -13,22 +13,38 @@
 	</xs:sequence>
 	</xs:complexType>
 	
-	<xs:complexType name="poll">
+	<xs:element  name="poll">
+	<xs:complexType>
+	<xs:attribute name="id" type="xs:positiveInteger" use="required"/>
     <xs:sequence>
 		<xs:element name="title" type="xs:string" minOccurs="1" maxOccurs="1"/>
       	<xs:element name="creator" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      	<xs:element name="description" type="xs:string" minOccurs="1" maxOccurs="1"/>
       	<xs:element name="location" type="xs:string" minOccurs="0" maxOccurs="1"/>
       	<xs:element name="createdAt" type="timeslot" minOccurs="1" maxOccurs="1"/>
       	<xs:element name="open" type="xs:boolean" minOccurs="1" maxOccurs="1"/>
       	<xs:element name="options" type="options" minOccurs="1" maxOccurs="1"/>
     </xs:sequence>
-  </xs:complexType>
-  
-  <xs:complexType name="timeslot">
-	<xs:sequence>
-		<xs:element name="date" type="xs:date" minOccurs="1" maxOccurs="1"/>
-		<xs:element name="time" type="xs:time" minOccurs="1" maxOccurs="1"/>
-	</xs:sequence>
+  	</xs:complexType>
+  	</xs:element>
+
+	<xs:complexType name="timeslot">
+		<xs:sequence>
+			<xs:element name="date" minOccurs="1" maxOccurs="1">
+				<xs:simpleType>
+					<xs:restriction  base="xs:string">
+						<xs:pattern value="[0-3][0-9]&#47;[0-1][0-9]&#47;[0-2][0-9][0-9][0-9]"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="time" minOccurs="1" maxOccurs="1">
+				<xs:simpleType>
+					<xs:restriction  base="xs:string">
+						<xs:pattern value="[0-2][0-9]&#58;[0-5][0-9]"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
 	</xs:complexType>
 	
 	<xs:complexType name="options">
@@ -40,7 +56,7 @@
 	<xs:complexType name="option">
 	<xs:sequence>
 		<xs:element name="id" type="xs:integer" minOccurs="1" maxOccurs="1"/>
-		<xs:element name="time" type="timeslot" minOccurs="1" maxOccurs="1"/>
+		<xs:element name="timeslot" type="timeslot" minOccurs="1" maxOccurs="1"/>
 		<xs:element name="participants" type="participants" minOccurs="1" maxOccurs="unbounded"/>
 	</xs:sequence>
 	</xs:complexType>
