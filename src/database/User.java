@@ -7,6 +7,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 
+//Class that contains a user
 @XmlAccessorType(XmlAccessType.FIELD)
 public class User implements Serializable{
 

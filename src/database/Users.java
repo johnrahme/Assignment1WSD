@@ -8,7 +8,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
-
+//Root xml for the users xml
 @XmlRootElement(name="users")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Users implements Serializable {
@@ -20,6 +20,7 @@ public class Users implements Serializable {
 		  
 	}
 	
+	//Function to add an example list for test purposes
 	public void setExampleList(){
 		
 		User u1 = new User("John", "Rahme", "john.rahme.se@gmail.com", "password");

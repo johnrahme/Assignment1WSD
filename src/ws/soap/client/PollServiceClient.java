@@ -27,13 +27,13 @@ public class PollServiceClient{
 		Option opt1 = new Option(0, t1,participants);
 		Option [] options = {opt1};
 		
-		Poll addedPoll = new Poll("Rest poll", null, "This is an example rest poll", "UTS", null, false, options, 0);
+		Poll addedPoll = new Poll("Soap poll", null, "This is an example soap poll", "UTS", null, false, options, 0);
 		
 		//Add the example poll
 		//System.out.println(soapService.addPoll("john.rahme.se@gmail.com", "password", addedPoll));
 		
 		//Change poll status takes (String email, String password, int id, boolean status)
-		System.out.println(soapService.changePollStatus("john.rahme.se@gmail.com", "password", 2, false));
+		//System.out.println(soapService.changePollStatus("john.rahme.se@gmail.com", "password", 2, false));
 		
 	} catch (ServiceException e) {
 		// TODO Auto-generated catch block

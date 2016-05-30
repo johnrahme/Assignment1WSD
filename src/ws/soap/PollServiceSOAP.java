@@ -8,6 +8,7 @@ import javax.servlet.ServletContext;
 import javax.xml.ws.WebServiceContext;
 import javax.xml.ws.handler.MessageContext;
 
+//Soap service to read and write to polls
 @WebService
 public class PollServiceSOAP {
 	@Resource
@@ -84,6 +85,7 @@ public class PollServiceSOAP {
 		return -1;
 	}
 	
+	//Method used to change the poll status, returns different strings depending on the result
 	@WebMethod
 	public String changePollStatus(String email, String password, int id, boolean status ){
 		UserHandler uh = null;
@@ -117,6 +119,7 @@ public class PollServiceSOAP {
 		return "Poll not found";
 	}
 	
+	//gets all polls by email, status, min responses and sorted by provided sorting preference
 	@WebMethod
 	public Polls fetchPolls(String email, String status, int minRes, String sort){
 		 PollHandler ph = null;

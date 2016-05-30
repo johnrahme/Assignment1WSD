@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 import javax.xml.bind.annotation.*;
 
+//This class contains the time options available for the poll
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Option implements Serializable{
 	

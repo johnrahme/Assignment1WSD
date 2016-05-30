@@ -7,6 +7,8 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 
+
+//This class handles all the convertion to and from xml for the users class
 public class UserHandler {
 
 	private String filePath;

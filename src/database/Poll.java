@@ -7,6 +7,8 @@ import java.util.*;
 
 import javax.xml.bind.annotation.*;
 
+
+//Class that contains the poll with the child options, this class also has comparators to sort polls
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Poll implements Serializable {
 

@@ -6,6 +6,9 @@ import java.util.*;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+
+
+//This class is a child to option and contains a participants answer to a specific Option
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Participant implements Serializable {
 	@XmlElement(name="name")

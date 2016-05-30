@@ -11,6 +11,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 
+//Simple date object customized to our needs
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Time implements Serializable {
 	

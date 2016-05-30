@@ -7,6 +7,7 @@ import javax.ws.rs.core.*;
 import javax.xml.bind.JAXBException;
 import java.io.*;
  
+//Rest service to write and retrieve a poll
 @Path("/pollApp")
 public class PollService {
  @Context
@@ -34,6 +35,7 @@ public class PollService {
   }
  }
  
+ //Get all polls, can filtered by creator, status and min responses and also sorted
 @Path("polls")
 @GET
 @Produces(MediaType.APPLICATION_XML)
@@ -77,6 +79,8 @@ public Polls getPolls(@QueryParam("email") String email, @QueryParam("status") S
 	}
 	return returnPolls;
 }
+
+//Post option to create a poll
 
 @Path("polls")
 @POST

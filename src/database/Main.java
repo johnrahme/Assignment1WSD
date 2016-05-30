@@ -13,6 +13,8 @@ public class Main {
 
 	public static void main(String[] args) throws Exception {
 		
+		//This is just for test purposes, adds users and polls and prints them to xml
+		
 		Users testUsers = new Users();
 		testUsers.setExampleList();
 		

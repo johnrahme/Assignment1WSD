@@ -8,6 +8,8 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
+
+//Root class for the xml, contains a list of all polls
 @XmlRootElement(name="polls")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Polls implements Serializable {
@@ -77,6 +79,8 @@ public class Polls implements Serializable {
 		}
 		
 	}
+    
+    //Function using the comparators to sort by title, creator or creation date.
     public void sortBy(String sortBy){
 		if(sortBy.toLowerCase().equals("title")){
 			Collections.sort(this.list, Poll.PollTitleComparator);
@@ -88,6 +92,8 @@ public class Polls implements Serializable {
 			Collections.sort(this.list, Poll.PollCreationComparator);
 		}
 	}
+    
+    //Function to filter polls by open or closed
     public void filterOpenClosed(boolean open){
     	ArrayList <Poll> bufferList = new ArrayList <Poll>();
     	for(Poll p: list){

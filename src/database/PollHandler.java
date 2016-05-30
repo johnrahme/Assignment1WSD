@@ -10,6 +10,8 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 
+
+//This class is used to read and write polls to xml
 public class PollHandler {
 
 	private String filePath;
@@ -30,6 +32,8 @@ public class PollHandler {
 		polls = (Polls)u.unmarshal(fin); // This loads the "shop" object
 		fin.close();
 	}
+	
+	//This function writes to the xml, is called every time anything is changed 
 	public void writeToXml() throws Exception{
 		  // Boilerplate code to convert objects to XML...
 		  JAXBContext jc = JAXBContext.newInstance(Polls.class);
@@ -127,6 +131,8 @@ public class PollHandler {
 		Poll addedPoll = new Poll(System.currentTimeMillis(),title, creator, description, location, createdAt, open, options);
 		return addedPoll;
 	}
+	
+	//This function gets the current time and creates the customized Date object
 	public Time getCurrentTimeObject(){
 		DateFormat timeFormat = new SimpleDateFormat("HH:mm");
 		DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");

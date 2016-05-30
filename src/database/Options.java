@@ -7,6 +7,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 
+//An array list with all the option objects
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Options implements Serializable {
 
